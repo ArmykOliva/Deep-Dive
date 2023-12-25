@@ -15,7 +15,7 @@ TagManager:
   - Grabbable
   - Hand
   - HandPlayer
-  - 
+  - IgnoreCollision
   - 
   - 
   - 
