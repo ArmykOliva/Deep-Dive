@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 735282521034439035}
   m_Layer: 0
-  m_Name: gunControl
+  m_Name: GunControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 6884345873183643450}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.708, y: 0.018997192, z: -0.629}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.18465997, y: 0.18466, z: 0.18465994}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -398,7 +398,7 @@ Transform:
   m_GameObject: {fileID: 6984749079774858549}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.716, y: -1.587, z: -0.625}
+  m_LocalPosition: {x: 0, y: -1.587, z: 0}
   m_LocalScale: {x: 0.021791939, y: 0.021791939, z: 0.021791939}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -503,7 +503,7 @@ Transform:
   m_GameObject: {fileID: 8230168840954161057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.716, y: 1.338, z: -0.625}
+  m_LocalPosition: {x: 0, y: 1.338, z: 0}
   m_LocalScale: {x: 0.021791939, y: 0.021791939, z: 0.021791939}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -611,17 +611,17 @@ PrefabInstance:
     - target: {fileID: 4101802235111929051, guid: 219b3db786e5a164286993fc260197c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.809
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4101802235111929051, guid: 219b3db786e5a164286993fc260197c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.213
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4101802235111929051, guid: 219b3db786e5a164286993fc260197c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.665
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4101802235111929051, guid: 219b3db786e5a164286993fc260197c9,
         type: 3}

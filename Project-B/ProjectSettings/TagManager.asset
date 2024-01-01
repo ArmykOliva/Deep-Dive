@@ -16,8 +16,8 @@ TagManager:
   - Hand
   - HandPlayer
   - IgnoreCollision
-  - 
-  - 
+  - Wall
+  - Enemy
   - 
   - 
   - 
