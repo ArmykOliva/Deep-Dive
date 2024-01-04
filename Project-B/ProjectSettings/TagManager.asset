@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - LaserAmmo
+  - ShotgunAmmo
+  - MinigunAmmo
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Wall
   - Enemy
   - 
-  - 
+  - PlayerCollidableOnly
   - 
   - 
   - 

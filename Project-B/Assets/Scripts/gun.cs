@@ -1,23 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Autohand;
+using UnityEngine.Events;
+using System;
+
+public enum GunType
+{
+  Minigun,
+  Shotgun,
+  Laser
+}
+
 
 public class gun : MonoBehaviour
 {
-  [Header("Gun objects and tips")]
+  [Header("Gun objects")]
+  public GunType currentGunType;
   public Transform origin;
-
+  
+  public GameObject minigun;
   public Transform minigunTip;
-  public Transform shotugnTip;
+  public float minigunFireRate = 0.2f;
+
+  public GameObject shotgun;
+  public Transform shotgunTip;
+  public float shotgunFireRate = 1f;
+
+  public GameObject laser;
   public Transform laserTip;
+  public float laserFireRate = 2f;
+
+  [Header("Gun ammo")]
+  public PlacePoint ammoCanPlacePoint; /// TODO: GUN SWAPPING, basically we check in the place point what tag does the object have, if it doesnt have a tag we can check prefab name, and then we change gun based o n the placed object. Mabe we can use the onplace event in code. https://earnestrobot.notion.site/Place-Points-e6361a414928450dbb53d76fd653cf9a. I would add the event just like onsqueeze here in code and check what tag the grabbable has.
+
+  [Header("Gun controller")]
   public Transform gunAim;
+  public Grabbable gunGrabbable;
 
   [Header("Shooting variables")]
   public float aimDistance = 15f; //distance where to aim
 
   public GameObject minigunBulletPrefab;
+  public GameObject shotgunBulletPrefab;
+  public GameObject laserBulletPrefab;
 
   public float angleLimitShooting = 70f;
+
+  [Header("On shoot events (helpful for adding effects sounds etc)")]
+  public UnityEvent OnShootMinigun;
+  public UnityEvent OnShootShotgun;
+  public UnityEvent OnShootLasergun;
 
   [Header("Animation")]
   public float angleLimitAnimation = 2f;
@@ -25,15 +58,29 @@ public class gun : MonoBehaviour
 
   private GameObject currentBulletPrefab;
   private Transform currentTip;
+  private bool shooting = false;
+  private float fireTimer = 0f;
 
   void Start()
   {
     currentBulletPrefab = minigunBulletPrefab;
     currentTip = minigunTip;
+
+    gunGrabbable.OnSqueezeEvent += HandleSqueeze;
+    gunGrabbable.OnUnsqueezeEvent += HandleUnsqueeze;
+
+    changeGun(currentGunType);
   }
 
-  void Update()
+	private void OnDestroy()
+	{
+    gunGrabbable.OnSqueezeEvent -= HandleSqueeze;
+    gunGrabbable.OnUnsqueezeEvent -= HandleUnsqueeze;
+  }
+
+	void Update()
   {
+    ///aim where gun controller is aiming
     RaycastHit hit;
     int layerMask = LayerMask.GetMask("Wall", "Enemy");
     Vector3 targetPoint;
@@ -57,6 +104,58 @@ public class gun : MonoBehaviour
     LookAtWithLimits(currentTip, targetPoint, angleLimitShooting, 0);
     //animation
     LookAtWithLimits(origin, targetPoint, angleLimitAnimation, rotationDampingAnimation);
+
+    //shoot trigger
+    switch (currentGunType)
+		{
+      case GunType.Minigun:
+        if (shooting && fireTimer <= 0)
+				{
+          Shoot();
+          fireTimer = minigunFireRate;
+				}
+        fireTimer = Math.Max(0, fireTimer - Time.deltaTime);
+        break;
+
+      case GunType.Shotgun:
+        if (shooting && fireTimer > 0)
+				{
+          //AudioManager.
+				}
+        break;
+		}
+  }
+  
+  public void changeGun(GunType gunToChange)
+	{
+    currentGunType = gunToChange;
+
+    // Disable all guns
+    minigun.SetActive(false);
+    shotgun.SetActive(false);
+    laser.SetActive(false);
+
+    //set different models based on currentGunType
+    switch (currentGunType)
+    {
+      case GunType.Minigun:
+        minigun.SetActive(true);
+        currentTip = minigunTip;
+        currentBulletPrefab = minigunBulletPrefab;
+        break;
+
+      case GunType.Shotgun:
+        shotgun.SetActive(true);
+        currentTip = shotgunTip;
+        currentBulletPrefab = shotgunBulletPrefab;
+        break;
+
+      case GunType.Laser:
+        laser.SetActive(true);
+        currentTip = laserTip;
+        currentBulletPrefab = laserBulletPrefab;
+        break;
+    }
   }
 
   void LookAtWithLimits(Transform objectToRotate, Vector3 targetPoint, float angleLimit, float rotationDamping)
@@ -92,9 +191,34 @@ public class gun : MonoBehaviour
       objectToRotate.rotation = finalRotation;
   }
 
+  private void HandleSqueeze(Hand hand, Grabbable grabbable)
+  {
+    shooting = true;
+  }
+
+  private void HandleUnsqueeze(Hand hand, Grabbable grabbable)
+  {
+    shooting = false;
+  }
+
+
   public void Shoot()
 	{
     GameObject bullet = Instantiate(currentBulletPrefab, currentTip.position, currentTip.rotation);
+    switch (currentGunType)
+    {
+      case GunType.Minigun:
+        OnShootMinigun?.Invoke();
+        break;
+
+      case GunType.Shotgun:
+        OnShootShotgun?.Invoke();
+        break;
+
+      case GunType.Laser:
+        OnShootLasergun?.Invoke();
+        break;
+    }
   }
 }
 

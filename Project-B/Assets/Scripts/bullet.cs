@@ -31,11 +31,10 @@ public class bullet : MonoBehaviour
 
   void OnTriggerEnter(Collider other)
   {
-
     /*Enemy enemy = other.GetComponent<Enemy>();
     if (enemy != null)
     {
-       enemy.TakeDamage(damageAmount);
+        enemy.TakeDamage(damageAmount);
     }*/
 
     // Destroy the bullet after it triggers something
