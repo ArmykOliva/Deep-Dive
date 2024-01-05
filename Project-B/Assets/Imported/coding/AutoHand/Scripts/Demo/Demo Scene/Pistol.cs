@@ -40,5 +40,11 @@ namespace Autohand.Demo{
 
             body.AddForce(barrelTip.transform.up*recoilPower*5, ForceMode.Impulse);
         }
+
+    public void Recoil(float duration)
+		{
+      GetComponent<Grabbable>().PlayHapticVibration();
+      body.AddForce(barrelTip.transform.up * recoilPower * 5, ForceMode.Impulse);
+    }
     }
 }

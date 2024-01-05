@@ -151,10 +151,11 @@ MonoBehaviour:
   minigunFireRate: 0.2
   shotgun: {fileID: 8657928076300501597}
   shotgunTip: {fileID: 991157563138054605}
-  shotgunFireRate: 1
+  shotgunFireRate: 1.2
   laser: {fileID: 6947858142931205684}
   laserTip: {fileID: 6663988068101846052}
-  laserFireRate: 2
+  laserFireRate: 0.3
+  ammoCanPlacePoint: {fileID: 0}
   gunAim: {fileID: 0}
   gunGrabbable: {fileID: 0}
   aimDistance: 15
@@ -180,14 +181,75 @@ MonoBehaviour:
           m_StringArgument: Minigun
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Autohand.Demo.Pistol, Assembly-CSharp
+        m_MethodName: Recoil
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.1
+          m_StringArgument: Minigun
+          m_BoolArgument: 0
+        m_CallState: 2
   OnShootShotgun:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4822735872971178928}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shotgun
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Autohand.Demo.Pistol, Assembly-CSharp
+        m_MethodName: Recoil
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.4
+          m_StringArgument: Shotgun
+          m_BoolArgument: 0
+        m_CallState: 2
   OnShootLasergun:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4822735872971178928}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Laser
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Autohand.Demo.Pistol, Assembly-CSharp
+        m_MethodName: Recoil
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.6
+          m_StringArgument: Laser
+          m_BoolArgument: 0
+        m_CallState: 2
   angleLimitAnimation: 20
   rotationDampingAnimation: 0.5
+  audioManager: {fileID: 4822735872971178928}
 --- !u!1 &2644580513027051477
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +301,36 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 49941614ff3897d45b966e7afa7b56b0, type: 3}
     minPitch: 0.9
     maxPitch: 1.1
+  - name: Shotgun
+    clips:
+    - {fileID: 8300000, guid: 51b48354f4d880c4f9959f5d7063cd28, type: 3}
+    minPitch: 1
+    maxPitch: 1
+  - name: ShotgunReload
+    clips:
+    - {fileID: 8300000, guid: ae9ef9dfd6d83254e91f1eb810cec842, type: 3}
+    minPitch: 1
+    maxPitch: 1
+  - name: ShotgunClick
+    clips:
+    - {fileID: 8300000, guid: 81db1d208117aad4c867a61ebdbc6938, type: 3}
+    minPitch: 1
+    maxPitch: 1
+  - name: NoAmmoClick
+    clips:
+    - {fileID: 8300000, guid: 81db1d208117aad4c867a61ebdbc6938, type: 3}
+    minPitch: 1
+    maxPitch: 1
+  - name: LowAmmoClick
+    clips:
+    - {fileID: 8300000, guid: 9d16da54c6d8f254a9b8d1ae08943add, type: 3}
+    minPitch: 1
+    maxPitch: 1
+  - name: GunSwap
+    clips:
+    - {fileID: 8300000, guid: 8ea66939cfee3714cbc11857ece9f15b, type: 3}
+    minPitch: 1
+    maxPitch: 1
 --- !u!82 &6837970275046093084
 AudioSource:
   m_ObjectHideFlags: 0

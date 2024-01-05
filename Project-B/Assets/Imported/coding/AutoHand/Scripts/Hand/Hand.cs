@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using UnityEditor;
 #endif
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.Serialization;
 using UnityEngine.XR;
 
@@ -820,10 +822,20 @@ namespace Autohand {
 
         /// <summary>Plays haptic vibration on the hand controller if supported by controller link</summary>
         public void PlayHapticVibration(float duration, float amp = 0.5f) {
-            if(left)
-                HandControllerLink.handLeft?.TryHapticImpulse(duration, amp);
-            else
-                HandControllerLink.handRight?.TryHapticImpulse(duration, amp);
+            XRController device;
+      if (left)
+      {
+        device = InputSystem.GetDevice<XRController>(UnityEngine.InputSystem.CommonUsages.LeftHand);
+        HandControllerLink.handLeft?.TryHapticImpulse(duration, amp);
+      }
+      else
+			{
+        device = InputSystem.GetDevice<XRController>(UnityEngine.InputSystem.CommonUsages.RightHand);
+        HandControllerLink.handRight?.TryHapticImpulse(duration, amp);
+      }
+       
+          var command = UnityEngine.InputSystem.XR.Haptics.SendHapticImpulseCommand.Create(0, amp, duration);
+          device.ExecuteCommand(ref command);
         }
 
 

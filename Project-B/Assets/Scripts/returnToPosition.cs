@@ -33,7 +33,6 @@ public class returnBack : MonoBehaviour
     // Check distance from the original position
     if (Vector3.Distance(transform.position, initialPosition) > distanceToUngrab)
     {
-      Debug.Log("UNGRAB");
       if (grabbable != null) grabbable.ForceHandsRelease();
       OnRelease(); // Auto-release if the distance is exceeded
     }

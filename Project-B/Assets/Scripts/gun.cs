@@ -25,14 +25,14 @@ public class gun : MonoBehaviour
 
   public GameObject shotgun;
   public Transform shotgunTip;
-  public float shotgunFireRate = 1f;
+  public float shotgunFireRate = 0.8f;
 
   public GameObject laser;
   public Transform laserTip;
-  public float laserFireRate = 2f;
+  public float laserFireRate = 0.3f;
 
   [Header("Gun ammo")]
-  public PlacePoint ammoCanPlacePoint; /// TODO: GUN SWAPPING, basically we check in the place point what tag does the object have, if it doesnt have a tag we can check prefab name, and then we change gun based o n the placed object. Mabe we can use the onplace event in code. https://earnestrobot.notion.site/Place-Points-e6361a414928450dbb53d76fd653cf9a. I would add the event just like onsqueeze here in code and check what tag the grabbable has.
+  public PlacePoint ammoCanPlacePoint; /// TODO: GUN SWAPPING, basically we check in the place point if he has Ammo script component, and then we change gun based o n the placed object. Mabe we can use the onplace event in code. https://earnestrobot.notion.site/Place-Points-e6361a414928450dbb53d76fd653cf9a. I would add the event just like onsqueeze here in code and check what tag the grabbable has.
 
   [Header("Gun controller")]
   public Transform gunAim;
@@ -55,11 +55,17 @@ public class gun : MonoBehaviour
   [Header("Animation")]
   public float angleLimitAnimation = 2f;
   public float rotationDampingAnimation = 0.2f;
+  public AudioManager audioManager;
 
   private GameObject currentBulletPrefab;
   private Transform currentTip;
   private bool shooting = false;
+  private bool shootingBefore = false; //for laser trigger
+  private bool playedReloadShotgun = false; //for shotgun reload sound
   private float fireTimer = 0f;
+
+  private AmmoCan currentAmmoCan;
+  private GameObject currentGameObjectInReloadStation;
 
   void Start()
   {
@@ -69,6 +75,9 @@ public class gun : MonoBehaviour
     gunGrabbable.OnSqueezeEvent += HandleSqueeze;
     gunGrabbable.OnUnsqueezeEvent += HandleUnsqueeze;
 
+    ammoCanPlacePoint.OnPlaceEvent += OnPlaceAmmo;
+    ammoCanPlacePoint.OnRemoveEvent += OnRemoveAmmo;
+
     changeGun(currentGunType);
   }
 
@@ -76,6 +85,8 @@ public class gun : MonoBehaviour
 	{
     gunGrabbable.OnSqueezeEvent -= HandleSqueeze;
     gunGrabbable.OnUnsqueezeEvent -= HandleUnsqueeze;
+    ammoCanPlacePoint.OnPlaceEvent -= OnPlaceAmmo;
+    ammoCanPlacePoint.OnRemoveEvent -= OnRemoveAmmo;
   }
 
 	void Update()
@@ -114,16 +125,46 @@ public class gun : MonoBehaviour
           Shoot();
           fireTimer = minigunFireRate;
 				}
-        fireTimer = Math.Max(0, fireTimer - Time.deltaTime);
         break;
 
       case GunType.Shotgun:
+        //clicked early
         if (shooting && fireTimer > 0)
 				{
-          //AudioManager.
+          audioManager.PlaySound("ShotgunClick");
+          fireTimer += 0.1f;
 				}
+
+        //reload sound
+        if (audioManager.getFirstAudioClip("ShotgunReload") != null)
+				{
+          if (!playedReloadShotgun && fireTimer <= audioManager.getFirstAudioClip("ShotgunReload").length)
+				  {
+            audioManager.PlaySound("ShotgunReload");
+            playedReloadShotgun = true;
+				  }
+				}
+        
+
+        if (shooting && fireTimer <= 0)
+				{
+          Shoot();
+          fireTimer = shotgunFireRate;
+				}
+        shooting = false;
+        break;
+
+      case GunType.Laser:
+        Debug.Log(shooting + " " + shootingBefore);
+        if (!shooting && shootingBefore && fireTimer <= 0)
+				{
+          Shoot();
+          fireTimer = laserFireRate;
+				}
+        shootingBefore = shooting;
         break;
 		}
+    fireTimer = Math.Max(0, fireTimer - Time.deltaTime);
   }
   
   public void changeGun(GunType gunToChange)
@@ -156,6 +197,9 @@ public class gun : MonoBehaviour
         currentBulletPrefab = laserBulletPrefab;
         break;
     }
+
+    //play sound
+    audioManager.PlaySound("GunSwap");
   }
 
   void LookAtWithLimits(Transform objectToRotate, Vector3 targetPoint, float angleLimit, float rotationDamping)
@@ -204,22 +248,73 @@ public class gun : MonoBehaviour
 
   public void Shoot()
 	{
-    GameObject bullet = Instantiate(currentBulletPrefab, currentTip.position, currentTip.rotation);
-    switch (currentGunType)
+    if (currentAmmoCan != null)
+		{
+      //no bullets
+      if (currentAmmoCan.currentAmmoCount <= 0)
+			{
+        audioManager.PlaySound("NoAmmoClick");
+        return;
+			}
+      //little amount 10% of bullets make sound
+      else if ((float)currentAmmoCan.currentAmmoCount <= (float)currentAmmoCan.ammoCount * 0.1f)
+      {
+        audioManager.PlaySound("LowAmmoClick");
+			}
+
+      switch (currentGunType)
+      {
+        case GunType.Minigun:
+          Instantiate(currentBulletPrefab, currentTip.position, currentTip.rotation);
+          OnShootMinigun?.Invoke();
+          break;
+
+        case GunType.Shotgun:
+          playedReloadShotgun = false;
+          Instantiate(currentBulletPrefab, currentTip.position, currentTip.rotation);
+          OnShootShotgun?.Invoke();
+          break;
+
+        case GunType.Laser:
+          Instantiate(currentBulletPrefab, currentTip.position, currentTip.rotation);
+          OnShootLasergun?.Invoke();
+          break;
+      }
+
+      currentAmmoCan.currentAmmoCount--;
+    } else
+		{
+      Debug.Log("Attempting to shoot out " + currentGameObjectInReloadStation);
+		}
+  }
+
+  private void OnPlaceAmmo(PlacePoint placePoint, Grabbable grab)
+  {
+    currentGameObjectInReloadStation = grab.gameObject;
+    // Attempt to get the Ammo script from the GameObject of ammoPlace
+    currentAmmoCan = grab.gameObject.GetComponent<AmmoCan>();
+
+    // Check if the Ammo script is attached
+    if (currentAmmoCan != null)
     {
-      case GunType.Minigun:
-        OnShootMinigun?.Invoke();
-        break;
+      // Access the type property from the Ammo script
+      GunType ammoType = currentAmmoCan.ammoType;
+      Debug.Log("Ammo Type: " + ammoType);
 
-      case GunType.Shotgun:
-        OnShootShotgun?.Invoke();
-        break;
-
-      case GunType.Laser:
-        OnShootLasergun?.Invoke();
-        break;
+      //change gun if ammo can is new
+      if (currentGunType != currentAmmoCan.ammoType) changeGun(currentAmmoCan.ammoType);
+    }
+    else
+    {
+      Debug.Log("Ammo script not found on the GameObject placed in reload");
     }
   }
+  private void OnRemoveAmmo(PlacePoint placePoint, Grabbable grab)
+	{
+    currentGameObjectInReloadStation = null;
+    currentAmmoCan = null;
+  }
+
 }
 
 

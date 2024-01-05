@@ -1378,11 +1378,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7582082664254967107, guid: f2f6e1f8ab275564e95cf59b8920864a,
         type: 3}
-      propertyPath: onSqueeze.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7582082664254967107, guid: f2f6e1f8ab275564e95cf59b8920864a,
-        type: 3}
       propertyPath: onSqueeze.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -1423,6 +1418,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1492201341519876224}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7436673124623278414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8322937954095477198, guid: f2f6e1f8ab275564e95cf59b8920864a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1492201341519876224}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5aa5c06028015b45918ad5dbbefc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9047068870190816707 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7582082664254967107, guid: f2f6e1f8ab275564e95cf59b8920864a,
@@ -1453,6 +1460,31 @@ PrefabInstance:
       propertyPath: gunGrabbable
       value: 
       objectReference: {fileID: 9047068870190816707}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: ammoCanPlacePoint
+      value: 
+      objectReference: {fileID: 606097588092527553}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: OnShootMinigun.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7436673124623278414}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: OnShootShotgun.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7436673124623278414}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: OnShootLasergun.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7436673124623278414}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: OnShootMinigun.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1720303877209382776, guid: 68ec66fc2006065469ae931218577cfb,
         type: 3}
       propertyPath: m_Name
@@ -1537,6 +1569,26 @@ PrefabInstance:
       propertyPath: gunGrabbable
       value: 
       objectReference: {fileID: 4071088825870461626}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: ammoCanPlacePoint
+      value: 
+      objectReference: {fileID: 606097588092527553}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: OnShootMinigun.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2505851105158141495}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: OnShootShotgun.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2505851105158141495}
+    - target: {fileID: 1653123782022582190, guid: 68ec66fc2006065469ae931218577cfb,
+        type: 3}
+      propertyPath: OnShootLasergun.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2505851105158141495}
     - target: {fileID: 1720303877209382776, guid: 68ec66fc2006065469ae931218577cfb,
         type: 3}
       propertyPath: m_Name
@@ -1628,6 +1680,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: reloadStation
       objectReference: {fileID: 0}
+    - target: {fileID: 4873139137536727614, guid: 86a60f12516685a41a49b5f2c8bf7478,
+        type: 3}
+      propertyPath: OnPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873139137536727614, guid: 86a60f12516685a41a49b5f2c8bf7478,
+        type: 3}
+      propertyPath: OnPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6140260310425009042}
+    - target: {fileID: 4873139137536727614, guid: 86a60f12516685a41a49b5f2c8bf7478,
+        type: 3}
+      propertyPath: OnPlace.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendMessageUpwards
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873139137536727614, guid: 86a60f12516685a41a49b5f2c8bf7478,
+        type: 3}
+      propertyPath: OnPlace.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Component, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8602925353701517556, guid: 86a60f12516685a41a49b5f2c8bf7478,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1683,6 +1755,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86a60f12516685a41a49b5f2c8bf7478, type: 3}
+--- !u!114 &606097588092527553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4873139137536727614, guid: 86a60f12516685a41a49b5f2c8bf7478,
+    type: 3}
+  m_PrefabInstance: {fileID: 5461059513452329471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9c288aa20513c4aafa0228d4cfd80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4371358850872463627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8602925353701517556, guid: 86a60f12516685a41a49b5f2c8bf7478,
@@ -1755,7 +1839,7 @@ PrefabInstance:
     - target: {fileID: 7582082664254967107, guid: f2f6e1f8ab275564e95cf59b8920864a,
         type: 3}
       propertyPath: onSqueeze.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7582082664254967107, guid: f2f6e1f8ab275564e95cf59b8920864a,
         type: 3}
@@ -1787,6 +1871,16 @@ PrefabInstance:
       propertyPath: onSqueeze.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8322937954095477198, guid: f2f6e1f8ab275564e95cf59b8920864a,
+        type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8322937954095477198, guid: f2f6e1f8ab275564e95cf59b8920864a,
+        type: 3}
+      propertyPath: shootVolume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1808,6 +1902,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5856810048193472505}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2505851105158141495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8322937954095477198, guid: f2f6e1f8ab275564e95cf59b8920864a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5856810048193472505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8527507692180843726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5aa5c06028015b45918ad5dbbefc548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4071088825870461626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7582082664254967107, guid: f2f6e1f8ab275564e95cf59b8920864a,

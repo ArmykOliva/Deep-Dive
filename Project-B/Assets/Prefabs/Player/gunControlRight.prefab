@@ -643,11 +643,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: simple_pistol
       objectReference: {fileID: 0}
+    - target: {fileID: 4696405998782078602, guid: 3c673bd24b3c02a47a2bdea506c0c23f,
+        type: 3}
+      propertyPath: onSqueeze.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5724036410258254334, guid: 3c673bd24b3c02a47a2bdea506c0c23f,
         type: 3}
       propertyPath: originalTransform
       value: 
       objectReference: {fileID: 473948385003916307}
+    - target: {fileID: 6599189236572873223, guid: 3c673bd24b3c02a47a2bdea506c0c23f,
+        type: 3}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599189236572873223, guid: 3c673bd24b3c02a47a2bdea506c0c23f,
+        type: 3}
+      propertyPath: shootVolume
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
