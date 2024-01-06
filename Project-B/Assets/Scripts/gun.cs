@@ -26,10 +26,12 @@ public class gun : MonoBehaviour
   public GameObject shotgun;
   public Transform shotgunTip;
   public float shotgunFireRate = 0.8f;
+  public int bulletCount = 10;
+  public float spreadAngle = 10f; // Total spread angle
 
   public GameObject laser;
   public Transform laserTip;
-  public float laserFireRate = 0.3f;
+  public float laserMaxChargeTime = 1.0f;
 
   [Header("Gun ammo")]
   public PlacePoint ammoCanPlacePoint; /// TODO: GUN SWAPPING, basically we check in the place point if he has Ammo script component, and then we change gun based o n the placed object. Mabe we can use the onplace event in code. https://earnestrobot.notion.site/Place-Points-e6361a414928450dbb53d76fd653cf9a. I would add the event just like onsqueeze here in code and check what tag the grabbable has.
@@ -57,7 +59,6 @@ public class gun : MonoBehaviour
   public float rotationDampingAnimation = 0.2f;
   public AudioManager audioManager;
 
-  private GameObject currentBulletPrefab;
   private Transform currentTip;
   private bool shooting = false;
   private bool shootingBefore = false; //for laser trigger
@@ -69,7 +70,6 @@ public class gun : MonoBehaviour
 
   void Start()
   {
-    currentBulletPrefab = minigunBulletPrefab;
     currentTip = minigunTip;
 
     gunGrabbable.OnSqueezeEvent += HandleSqueeze;
@@ -125,19 +125,20 @@ public class gun : MonoBehaviour
           Shoot();
           fireTimer = minigunFireRate;
 				}
+        fireTimer = Math.Max(0, fireTimer - Time.deltaTime);
         break;
 
       case GunType.Shotgun:
-        //clicked early
-        if (shooting && fireTimer > 0)
-				{
-          audioManager.PlaySound("ShotgunClick");
-          fireTimer += 0.1f;
-				}
-
         //reload sound
         if (audioManager.getFirstAudioClip("ShotgunReload") != null)
 				{
+          //clicked early
+          if (shooting && fireTimer > audioManager.getFirstAudioClip("ShotgunReload").length)
+          {
+            audioManager.PlaySound("ShotgunClick");
+            fireTimer += 0.1f;
+          }
+
           if (!playedReloadShotgun && fireTimer <= audioManager.getFirstAudioClip("ShotgunReload").length)
 				  {
             audioManager.PlaySound("ShotgunReload");
@@ -152,19 +153,30 @@ public class gun : MonoBehaviour
           fireTimer = shotgunFireRate;
 				}
         shooting = false;
+        fireTimer = Math.Max(0, fireTimer - Time.deltaTime);
         break;
 
       case GunType.Laser:
-        Debug.Log(shooting + " " + shootingBefore);
-        if (!shooting && shootingBefore && fireTimer <= 0)
+        //charging
+        if (shooting && currentAmmoCan != null && currentAmmoCan.currentAmmoCount > 0)
 				{
+          if (!audioManager.IsSoundPlaying("LaserChargeUp"))
+          {
+            audioManager.PlaySound("LaserChargeUp");
+          }
+          fireTimer = Math.Min(laserMaxChargeTime, fireTimer + Time.deltaTime);
+        }
+
+        //shoot
+        if (!shooting && shootingBefore)
+				{
+          audioManager.StopSound("LaserChargeUp");
           Shoot();
-          fireTimer = laserFireRate;
-				}
+          fireTimer = 0;
+        }
         shootingBefore = shooting;
         break;
 		}
-    fireTimer = Math.Max(0, fireTimer - Time.deltaTime);
   }
   
   public void changeGun(GunType gunToChange)
@@ -182,19 +194,16 @@ public class gun : MonoBehaviour
       case GunType.Minigun:
         minigun.SetActive(true);
         currentTip = minigunTip;
-        currentBulletPrefab = minigunBulletPrefab;
         break;
 
       case GunType.Shotgun:
         shotgun.SetActive(true);
         currentTip = shotgunTip;
-        currentBulletPrefab = shotgunBulletPrefab;
         break;
 
       case GunType.Laser:
         laser.SetActive(true);
         currentTip = laserTip;
-        currentBulletPrefab = laserBulletPrefab;
         break;
     }
 
@@ -257,7 +266,7 @@ public class gun : MonoBehaviour
         return;
 			}
       //little amount 10% of bullets make sound
-      else if ((float)currentAmmoCan.currentAmmoCount <= (float)currentAmmoCan.ammoCount * 0.1f)
+      else if ((float)currentAmmoCan.currentAmmoCount <= (float)currentAmmoCan.ammoCount * 0.25f)
       {
         audioManager.PlaySound("LowAmmoClick");
 			}
@@ -265,18 +274,42 @@ public class gun : MonoBehaviour
       switch (currentGunType)
       {
         case GunType.Minigun:
-          Instantiate(currentBulletPrefab, currentTip.position, currentTip.rotation);
+          Instantiate(minigunBulletPrefab, currentTip.position, currentTip.rotation);
           OnShootMinigun?.Invoke();
           break;
 
         case GunType.Shotgun:
           playedReloadShotgun = false;
-          Instantiate(currentBulletPrefab, currentTip.position, currentTip.rotation);
+
+          for (int i = 0; i < bulletCount; i++)
+          {
+            // Calculate random angle within the cone
+            float horizontalAngle = UnityEngine.Random.Range(-spreadAngle / 2f, spreadAngle / 2f);
+            float verticalAngle = UnityEngine.Random.Range(-spreadAngle / 2f, spreadAngle / 2f);
+
+            // Convert angles to a direction vector
+            Quaternion horizontalRotation = Quaternion.AngleAxis(horizontalAngle, currentTip.up);
+            Quaternion verticalRotation = Quaternion.AngleAxis(verticalAngle, currentTip.right);
+            Quaternion bulletRotation = currentTip.rotation * horizontalRotation * verticalRotation;
+
+            // Instantiate the bullet
+            Instantiate(shotgunBulletPrefab, currentTip.position, bulletRotation);
+          }
+
           OnShootShotgun?.Invoke();
           break;
 
+
         case GunType.Laser:
-          Instantiate(currentBulletPrefab, currentTip.position, currentTip.rotation);
+          float strength = fireTimer / laserMaxChargeTime;
+          GameObject laserBulletInstance = Instantiate(laserBulletPrefab, currentTip.position, currentTip.rotation);
+          Laser bulletScript = laserBulletInstance.GetComponent<Laser>();
+
+          if (bulletScript != null)
+          {
+            bulletScript.strength = strength;
+          }
+
           OnShootLasergun?.Invoke();
           break;
       }

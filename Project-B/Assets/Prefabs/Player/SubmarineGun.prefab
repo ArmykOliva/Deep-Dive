@@ -148,22 +148,24 @@ MonoBehaviour:
   origin: {fileID: 2069972017467259849}
   minigun: {fileID: 1052234115542357078}
   minigunTip: {fileID: 8857833932551500396}
-  minigunFireRate: 0.2
+  minigunFireRate: 0.1
   shotgun: {fileID: 8657928076300501597}
   shotgunTip: {fileID: 991157563138054605}
   shotgunFireRate: 1.2
+  bulletCount: 20
+  spreadAngle: 15
   laser: {fileID: 6947858142931205684}
   laserTip: {fileID: 6663988068101846052}
-  laserFireRate: 0.3
+  laserMaxChargeTime: 1
   ammoCanPlacePoint: {fileID: 0}
   gunAim: {fileID: 0}
   gunGrabbable: {fileID: 0}
   aimDistance: 15
   minigunBulletPrefab: {fileID: 6681873948133400755, guid: 6e1b46dc7486b544eb069fab5f0989f2,
     type: 3}
-  shotgunBulletPrefab: {fileID: 6681873948133400755, guid: 6e1b46dc7486b544eb069fab5f0989f2,
+  shotgunBulletPrefab: {fileID: 6681873948133400755, guid: a04b03841dd57034cae738eaf401eced,
     type: 3}
-  laserBulletPrefab: {fileID: 6681873948133400755, guid: 6e1b46dc7486b544eb069fab5f0989f2,
+  laserBulletPrefab: {fileID: 787882674783781748, guid: 92bcbd51ccb548d4793d98bd3c5810be,
     type: 3}
   angleLimitShooting: 70
   OnShootMinigun:
@@ -216,7 +218,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.4
+          m_FloatArgument: 0.44
           m_StringArgument: Shotgun
           m_BoolArgument: 0
         m_CallState: 2
@@ -243,7 +245,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.6
+          m_FloatArgument: 1
           m_StringArgument: Laser
           m_BoolArgument: 0
         m_CallState: 2
@@ -329,6 +331,16 @@ MonoBehaviour:
   - name: GunSwap
     clips:
     - {fileID: 8300000, guid: 8ea66939cfee3714cbc11857ece9f15b, type: 3}
+    minPitch: 1
+    maxPitch: 1
+  - name: Laser
+    clips:
+    - {fileID: 8300000, guid: d98ae3c76f5a96343939d7dada508a11, type: 3}
+    minPitch: 1
+    maxPitch: 1
+  - name: LaserChargeUp
+    clips:
+    - {fileID: 8300000, guid: c23401f9afaba1149991eef52a9a487d, type: 3}
     minPitch: 1
     maxPitch: 1
 --- !u!82 &6837970275046093084

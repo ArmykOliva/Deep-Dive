@@ -70,6 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7cebdfb3b7b9fa74096ca4a3e49482a7,
         type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7cebdfb3b7b9fa74096ca4a3e49482a7,
+        type: 3}
       propertyPath: m_TagString
       value: MinigunAmmo
       objectReference: {fileID: 0}
@@ -385,6 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoType: 0
   ammoCount: 100
+  currentAmmoCount: 0
 --- !u!114 &8845084229122042307
 MonoBehaviour:
   m_ObjectHideFlags: 0
