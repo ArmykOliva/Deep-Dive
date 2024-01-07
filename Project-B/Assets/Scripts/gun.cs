@@ -42,6 +42,7 @@ public class gun : MonoBehaviour
 
   [Header("Shooting variables")]
   public float aimDistance = 15f; //distance where to aim
+  public float maxAimDistance = 30f;
 
   public GameObject minigunBulletPrefab;
   public GameObject shotgunBulletPrefab;
@@ -100,14 +101,14 @@ public class gun : MonoBehaviour
     Ray ray = new Ray(gunAim.position, gunAim.forward);
 
     // Perform the Raycast
-    if (Physics.Raycast(ray, out hit, aimDistance, layerMask))
+    if (Physics.Raycast(ray, out hit, maxAimDistance, layerMask))
     {
       // Ray hit an object, use the hit point
       targetPoint = hit.point;
     }
     else
     {
-      // Ray didn't hit, use a point 20 meters away
+      // Ray didn't hit, use a point 15 meters away
       targetPoint = ray.origin + ray.direction * aimDistance;
     }
 

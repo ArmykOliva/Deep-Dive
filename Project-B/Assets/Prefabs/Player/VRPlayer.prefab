@@ -1359,6 +1359,11 @@ PrefabInstance:
       objectReference: {fileID: 3446509347058007384}
     - target: {fileID: 9201711370266972039, guid: 386242486c5972145be957989b61c7df,
         type: 3}
+      propertyPath: reachDistance
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201711370266972039, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
       propertyPath: followPosition
       value: 
       objectReference: {fileID: 7668830299865818642, guid: f13bbbc9578242a44953eec81cfb27d4,
@@ -1967,6 +1972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Auto Hand Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8834320319295017362, guid: fdc3ba53f4e81a040b0471bbbafbb10a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8834320319295017375, guid: fdc3ba53f4e81a040b0471bbbafbb10a,
         type: 3}
@@ -2596,6 +2606,11 @@ PrefabInstance:
         type: 3}
       propertyPath: showGizmos
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201711370266972039, guid: 386242486c5972145be957989b61c7df,
+        type: 3}
+      propertyPath: reachDistance
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 9201711370266972039, guid: 386242486c5972145be957989b61c7df,
         type: 3}

@@ -5,7 +5,7 @@ public class RaycastGizmoDrawer : MonoBehaviour
   public Transform tip; // Assign the tip transform
   private Vector3 hitPoint; // To store the hit point
   private bool hasHit; // To check if raycast hits anything
-  public float maxDistance = 30f;
+  public float maxDistance = 15f;
 
   void Update()
   {
