@@ -148,7 +148,7 @@ MonoBehaviour:
   origin: {fileID: 2069972017467259849}
   minigun: {fileID: 1052234115542357078}
   minigunTip: {fileID: 8857833932551500396}
-  minigunFireRate: 0.1
+  minigunFireRate: 0.115
   shotgun: {fileID: 8657928076300501597}
   shotgunTip: {fileID: 991157563138054605}
   shotgunFireRate: 1.2
