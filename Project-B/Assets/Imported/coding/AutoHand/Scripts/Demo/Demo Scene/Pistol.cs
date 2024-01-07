@@ -43,7 +43,7 @@ namespace Autohand.Demo{
 
     public void Recoil(float duration)
 		{
-      GetComponent<Grabbable>().PlayHapticVibration();
+      GetComponent<Grabbable>().PlayHapticVibration(duration);
       body.AddForce(barrelTip.transform.up * recoilPower * 5, ForceMode.Impulse);
     }
     }
