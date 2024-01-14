@@ -1716,8 +1716,99 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2203653970355104685, guid: 24a0452d5dab5c04181ec7630f550331,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1963879386153097239}
   m_SourcePrefab: {fileID: 100100000, guid: 24a0452d5dab5c04181ec7630f550331, type: 3}
+--- !u!4 &1963879386153097236 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 179864958868267615, guid: 24a0452d5dab5c04181ec7630f550331,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963879386153097235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1963879386153097237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2203653970355104685, guid: 24a0452d5dab5c04181ec7630f550331,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963879386153097235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963879386153097238 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3224635990314698578, guid: 24a0452d5dab5c04181ec7630f550331,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963879386153097235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd6c8c8203d12f46b0e71e2f2faa037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1963879386153097239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963879386153097237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9c288aa20513c4aafa0228d4cfd80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignoreMe: 0
+  showPlaceSettings: 1
+  startPlaced: {fileID: 0}
+  placedOffset: {fileID: 1963879386153097236}
+  placeRadius: 0.15
+  radiusOffset: {x: 0, y: 0, z: 0}
+  parentOnPlace: 1
+  forcePlace: 1
+  forceHandRelease: 1
+  destroyObjectOnPlace: 0
+  disableRigidbodyOnPlace: 0
+  disableGrabOnPlace: 0
+  disablePlacePointOnPlace: 0
+  makePlacedKinematic: 1
+  placedJointLink: {fileID: 0}
+  jointBreakForce: 1000
+  showPlaceRequirements: 1
+  heldPlaceOnly: 0
+  nameCompareType: 0
+  placeNames: []
+  blacklistNames: []
+  onlyAllows: []
+  dontAllows: []
+  placeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  showEvents: 1
+  OnPlace:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1963879386153097238}
+        m_TargetAssemblyTypeName: UnityEngine.Component, UnityEngine
+        m_MethodName: SendMessageUpwards
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRemove:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHighlight:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStopHighlight:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2001743467280792151
 PrefabInstance:
   m_ObjectHideFlags: 0
