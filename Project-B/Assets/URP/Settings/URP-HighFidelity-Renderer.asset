@@ -53,9 +53,8 @@ MonoBehaviour:
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: 2795503547534282005}
-  - {fileID: 6322966350184857664}
-  m_RendererFeatureMap: adc0de57c6d2eee5150d204faa9fcb264040841d65b0bf57
+  - {fileID: 4580883967220382207}
+  m_RendererFeatureMap: adc0de57c6d2eee5fff97397b291923f
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -94,7 +93,7 @@ MonoBehaviour:
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
-  m_DepthPrimingMode: 1
+  m_DepthPrimingMode: 0
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 1
@@ -115,7 +114,11 @@ MonoBehaviour:
     Event: 550
     _UseCustomDepthTexture: 0
     _UseFogOffsetTexture: 0
---- !u!114 &6322966350184857664
+  DepthBlit: {fileID: 0}
+  FogBlit: {fileID: 0}
+  FinalBlit: {fileID: 0}
+  SSMS: {fileID: 0}
+--- !u!114 &4580883967220382207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
