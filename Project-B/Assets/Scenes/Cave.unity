@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 8918335043019036621, guid: d0127fbabe8ddb841aedf1f7d6b86b34,
         type: 3}
       propertyPath: m_DecalLayerMask
-      value: 1
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
