@@ -24,13 +24,13 @@ public class Laser : MonoBehaviour
     {
       SetLine(startPosition, hit.point);
 
-      // Check for an enemy at the hit point
-      /*Enemy enemy = hit.collider.GetComponent<Enemy>();
-      if (enemy != null)
-      {
-        enemy.TakeDamage(damage*strength);
-      }*/
-    }
+			IDamageable damageable = hit.collider.GetComponent<IDamageable>();
+			if (damageable == null) damageable = hit.collider.GetComponentInParent<IDamageable>();
+			if (damageable != null)
+			{
+				damageable.TakeDamage(Mathf.RoundToInt(damage * strength));
+			}
+		}
     else
     {
       SetLine(startPosition, startPosition + transform.forward * maxDistance);

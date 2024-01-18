@@ -23,8 +23,6 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
   private float flashDuration = 0.1f; // Duration of the flash effect
   private Texture originalTexture;
 
-  public abstract void Initialize();
-
 	void Start()
   {
     rend = GetComponent<Renderer>();
@@ -72,7 +70,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
       normalMaterial.SetTexture("_Atlas", originalTexture);
     }
     //for normal materials
-    else
+    else if (normalMaterial != null)
     {
       rend.material = flashMaterial;
       yield return new WaitForSeconds(flashDuration);

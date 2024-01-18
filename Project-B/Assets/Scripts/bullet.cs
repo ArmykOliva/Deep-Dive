@@ -38,25 +38,29 @@ public class bullet : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		IDamageable damageable = other.GetComponent<IDamageable>();
-		if (damageable != null)
+		if (!hasHit)
 		{
-			damageable.TakeDamage(damage);
-		}
-		else
-		{
-			OnHitWall?.Invoke();
-		}
+			IDamageable damageable = other.GetComponent<IDamageable>();
+			if (damageable == null) damageable = other.GetComponentInParent<IDamageable>();
+			if (damageable != null)
+			{
+				damageable.TakeDamage(damage);
+			}
+			else
+			{
+				OnHitWall?.Invoke();
+			}
 
-		// Bullet hits something, so disable its MeshRenderer and stop it from moving
-		if (bulletMeshRenderer != null)
-		{
-			bulletMeshRenderer.enabled = false;
-		}
-		hasHit = true; // Stop the bullet from moving
+			// Bullet hits something, so disable its MeshRenderer and stop it from moving
+			if (bulletMeshRenderer != null)
+			{
+				bulletMeshRenderer.enabled = false;
+			}
+			hasHit = true; // Stop the bullet from moving
 
-		// Start the coroutine to destroy the bullet after 1 second
-		StartCoroutine(DestroyAfterDelay());
+			// Start the coroutine to destroy the bullet after 1 second
+			StartCoroutine(DestroyAfterDelay());
+		}
 	}
 
 	private IEnumerator DestroyAfterDelay()

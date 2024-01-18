@@ -36,18 +36,13 @@ public class EnemyMedium : EnemyBase
 	private EnemyMediumState currentState = EnemyMediumState.generateRandomPoint;
 
 
-	public override void Initialize()
-	{
-		Debug.Log(spikeScale);
-	}
-
 	void Update()
 	{
 		switch 	(currentState)
 		{
 			case EnemyMediumState.generateRandomPoint:
 				startState = false;
-				randomPoint = enemyBorder.CreateRandomTransportPointOnCircle(transform.position, 0.4f);
+				randomPoint = enemyBorder.CreateRandomTransportPointInCircle(transform.position, 0.4f);
 				currentState = EnemyMediumState.goToPoint;
 				startState = true;
 				break;
@@ -79,7 +74,7 @@ public class EnemyMedium : EnemyBase
 				{
 					speed = maxSlowSpeed;
 
-					randomPointSubmarine = enemyBorderSubmarine.CreateRandomTransportPointOnCircle(transform.position, 0.0f);
+					randomPointSubmarine = enemyBorderSubmarine.CreateRandomTransportPointInCircle(transform.position, 0.0f);
 					timer = aimTimer;
 					
 				}
