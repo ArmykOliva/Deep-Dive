@@ -9,6 +9,9 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
   public int damage = 10; //10 damage = 1 broken thing;
   public Material flashMaterial;
   public Texture damageTexture;
+  public EnemyBorder enemyBorder; // the border where the enemy will be moving most of the time
+  public EnemyBorder enemyBorderSubmarine; // the border where the enemy will be attacking (shooting, biting, charging...)
+
 
   [Header("Useful events (helpful for adding effects sounds etc)")]
   public UnityEvent OnHit;
@@ -20,7 +23,9 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
   private float flashDuration = 0.1f; // Duration of the flash effect
   private Texture originalTexture;
 
-  void Start()
+  public abstract void Initialize();
+
+	void Start()
   {
     rend = GetComponent<Renderer>();
     if (rend != null)

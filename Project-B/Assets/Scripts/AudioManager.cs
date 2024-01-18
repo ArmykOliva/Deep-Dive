@@ -26,6 +26,10 @@ public class AudioManager : MonoBehaviour
     foreach (var sound in sounds)
     {
       AudioSource source = gameObject.AddComponent<AudioSource>();
+			source.spatialBlend = 1.0f; // Ensure the sound is fully 3D
+			source.minDistance = 1.0f; // The distance within which the volume is at its maximum
+			source.maxDistance = 50.0f; // The maximum distance at which the sound is still audible
+			
       soundAudioSources[sound.name] = source;
       soundDatas[sound.name] = sound;
     }

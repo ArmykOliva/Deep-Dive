@@ -154,6 +154,10 @@ MonoBehaviour:
   speed: 20
   damage: 1
   maxDistance: 500
+  OnHitWall:
+    m_PersistentCalls:
+      m_Calls: []
+  bulletMeshRenderer: {fileID: 2396834557652636476}
 --- !u!54 &3528684463871670558
 Rigidbody:
   m_ObjectHideFlags: 0
