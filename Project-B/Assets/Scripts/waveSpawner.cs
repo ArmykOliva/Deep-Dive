@@ -22,6 +22,7 @@ public class EnemySpawnInfo
 public class waveSpawner : MonoBehaviour
 {
 	public List<EnemyWave> waves;
+	public EnemyBorder spawnBorder;
 	public EnemyBorder enemyBorder; // the border where the enemy will be moving most of the time
 	public EnemyBorder enemyBorderSubmarine; // the border where the enemy will be attacking (shooting, biting, charging...)
 
@@ -65,9 +66,7 @@ public class waveSpawner : MonoBehaviour
 	private void SpawnEnemy(EnemySpawnInfo enemyInfo)
 	{
 		// Generate a random position within the specified ranges
-		float randomX = UnityEngine.Random.Range(-5f, 5f);
-		float randomY = UnityEngine.Random.Range(-5f, 5f);
-		Vector3 spawnPosition = new Vector3(randomX, randomY, transform.position.z); // Assuming Z is 0, adjust if needed
+		Vector3 spawnPosition = spawnBorder.GetRandomPointInCircle(transform.position, 0f);
 
 		GameObject enemyObject = Instantiate(enemyInfo.enemyPrefab, spawnPosition, transform.rotation);
 		EnemyBase enemy = enemyObject.GetComponent<EnemyBase>();
@@ -76,7 +75,6 @@ public class waveSpawner : MonoBehaviour
 		{
 			enemy.enemyBorder = enemyBorder;
 			enemy.enemyBorderSubmarine = enemyBorderSubmarine;
-			enemy.Initialize();
 		}
 		else
 		{

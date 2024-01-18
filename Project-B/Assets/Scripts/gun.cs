@@ -42,7 +42,7 @@ public class gun : MonoBehaviour
 
   [Header("Shooting variables")]
   public float aimDistance = 15f; //distance where to aim
-  public float maxAimDistance = 30f;
+  public float maxAimDistance = 50f;
 
   public GameObject minigunBulletPrefab;
   public GameObject shotgunBulletPrefab;
@@ -59,8 +59,9 @@ public class gun : MonoBehaviour
   public float angleLimitAnimation = 2f;
   public float rotationDampingAnimation = 0.2f;
   public AudioManager audioManager;
+	public LineRenderer laserSightLineRenderer;
 
-  private Transform currentTip;
+	private Transform currentTip;
   private bool shooting = false;
   private bool shootingBefore = false; //for laser trigger
   private bool playedReloadShotgun = false; //for shotgun reload sound
@@ -76,10 +77,14 @@ public class gun : MonoBehaviour
     gunGrabbable.OnSqueezeEvent += HandleSqueeze;
     gunGrabbable.OnUnsqueezeEvent += HandleUnsqueeze;
 
+    gunGrabbable.OnGrabEvent += HandleGrab;
+    gunGrabbable.OnReleaseEvent += HandleRelease;
+
     ammoCanPlacePoint.OnPlaceEvent += OnPlaceAmmo;
     ammoCanPlacePoint.OnRemoveEvent += OnRemoveAmmo;
 
-    changeGun(currentGunType);
+		laserSightLineRenderer.enabled = false;
+		changeGun(currentGunType);
   }
 
 	private void OnDestroy()
@@ -112,8 +117,13 @@ public class gun : MonoBehaviour
       targetPoint = ray.origin + ray.direction * aimDistance;
     }
 
-    //look at the point
-    LookAtWithLimits(currentTip, targetPoint, angleLimitShooting, 0);
+		// Draw the line using LineRenderer
+		laserSightLineRenderer.SetPosition(0, ray.origin);
+		laserSightLineRenderer.SetPosition(1, targetPoint);
+
+    shooting = true;
+		//look at the point
+		LookAtWithLimits(currentTip, targetPoint, angleLimitShooting, 0);
     //animation
     LookAtWithLimits(origin, targetPoint, angleLimitAnimation, rotationDampingAnimation);
 
@@ -255,8 +265,18 @@ public class gun : MonoBehaviour
     shooting = false;
   }
 
+  private void HandleGrab(Hand hand, Grabbable grabbable)
+  {
+		laserSightLineRenderer.enabled = true;
 
-  public void Shoot()
+	}
+
+  private void HandleRelease(Hand hand, Grabbable grabbable)
+  {
+		laserSightLineRenderer.enabled = false;
+	}
+
+	public void Shoot()
 	{
     if (currentAmmoCan != null)
 		{

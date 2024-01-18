@@ -36,7 +36,7 @@ public class EnemyBorder : MonoBehaviour
 	}
 
 	// Function to get a random point on the circle that is further than originalPoint + 1
-	public Vector3 GetRandomPointOnCircle(Vector3 originalPoint,float minDistance)
+	public Vector3 GetRandomPointInCircle(Vector3 originalPoint,float minDistance)
 	{
 		Vector3 randomPoint = Vector3.zero;
 		float distance;
@@ -62,10 +62,10 @@ public class EnemyBorder : MonoBehaviour
 		return randomPoint;
 	}
 
-	public Transform CreateRandomTransportPointOnCircle(Vector3 originalPoint, float minDistance)
+	public Transform CreateRandomTransportPointInCircle(Vector3 originalPoint, float minDistance)
 	{
 		// Get a random point on the circle that meets the distance criteria
-		Vector3 point = GetRandomPointOnCircle(originalPoint, minDistance);
+		Vector3 point = GetRandomPointInCircle(originalPoint, minDistance);
 
 		// Create a new GameObject at the random point
 		GameObject transportPoint = new GameObject("RandomTransportPoint");

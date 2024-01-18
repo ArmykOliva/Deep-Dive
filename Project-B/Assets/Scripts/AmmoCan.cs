@@ -11,9 +11,12 @@ public class AmmoCan : MonoBehaviour
   public int currentAmmoCount;
 
   private Material instanceMaterial;
-  private float saturationLevel = 1.0f;
+	private Renderer objectRenderer;
+	private MaterialPropertyBlock propBlock;
+	private Color originalEmissionColor;
+	private float originalEmissionIntensity;
 
-  private void Start()
+	private void Start()
 	{
     currentAmmoCount = ammoCount;
 
@@ -24,31 +27,31 @@ public class AmmoCan : MonoBehaviour
       instanceMaterial = new Material(renderer.material);
       renderer.material = instanceMaterial;
     }
-  }
+
+		propBlock = new MaterialPropertyBlock();
+		originalEmissionColor = renderer.material.GetColor("_EmissionColor");
+
+		originalEmissionIntensity = 0.4f;
+	}
 
   void Update()
   {
-    float normalizedAmmoCount = (float)currentAmmoCount / (float)ammoCount;
-    saturationLevel = Mathf.Clamp01(Mathf.Pow(normalizedAmmoCount, 0.2f)); // Adjust this exponent to change the curve
-
-    if (instanceMaterial != null)
-    {
-      Color originalColor = instanceMaterial.color;
-
-      // Convert to HSV
-      Color.RGBToHSV(originalColor, out float H, out float S, out float V);
-
-      // Adjust saturation
-      S *= saturationLevel;
-
-      // Convert back to RGB
-      instanceMaterial.color = Color.HSVToRGB(H, S, V);
-    }
+		float normalizedAmmoCount = (float)currentAmmoCount / (float)ammoCount;
+		UpdateEmissionIntensity(normalizedAmmoCount);
   }
 
+	void UpdateEmissionIntensity(float normalizedValue)
+	{
+		// Calculate new emission color based on the normalized ammo count
+		Color newEmissionColor = instanceMaterial.GetColor("_EmissionColor") * Mathf.Lerp(0, originalEmissionIntensity, normalizedValue);
+		instanceMaterial.SetVector("_EmissionColor", new Vector4(0.8196f, 0.783f, 0) * -4.0f);
 
+		// Apply the new emission color to the material instance
+		/*instanceMaterial.SetColor("_EmissionColor", newEmissionColor);
+		DynamicGI.SetEmissive(objectRenderer, newEmissionColor); // Update global illumination with the new emission*/
+	}
 
-  void OnDestroy()
+	void OnDestroy()
   {
     // Clean up the created material instance when the object is destroyed
     if (instanceMaterial != null)
