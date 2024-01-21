@@ -85,6 +85,8 @@ public class gun : MonoBehaviour
 
 		laserSightLineRenderer.enabled = false;
 		changeGun(currentGunType);
+    
+    
   }
 
 	private void OnDestroy()
@@ -121,7 +123,7 @@ public class gun : MonoBehaviour
 		laserSightLineRenderer.SetPosition(0, ray.origin);
 		laserSightLineRenderer.SetPosition(1, targetPoint);
 
-    shooting = true;
+    //shooting = true;
 		//look at the point
 		LookAtWithLimits(currentTip, targetPoint, angleLimitShooting, 0);
     //animation
@@ -180,7 +182,7 @@ public class gun : MonoBehaviour
 
         //shoot
         if (!shooting && shootingBefore)
-				{
+        {
           audioManager.StopSound("LaserChargeUp");
           Shoot();
           fireTimer = 0;
