@@ -86,6 +86,15 @@ public class Rock : EnemyBase
 				// Start the coroutine to destroy the bullet after 1 second
 				StartCoroutine(DestroyAfterDelay());
 			}
+			else
+			{
+				// Check if the collided object's layer is 'Wall'
+				if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
+				{
+					// Destroy the bullet immediately
+					Destroy(gameObject);
+				}
+			}
 		}
 	}
 

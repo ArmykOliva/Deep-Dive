@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2531103451405558733}
   m_Layer: 12
   m_Name: LionfishBeak
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  damage: 1
+  damage: 5
   maxDistance: 100
   active: 0
   OnHitSubmarine:

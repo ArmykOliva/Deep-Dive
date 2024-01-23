@@ -165,6 +165,9 @@ MonoBehaviour:
           m_StringArgument: Laser
           m_BoolArgument: 0
         m_CallState: 2
+  OnChargeLasergun:
+    m_PersistentCalls:
+      m_Calls: []
   angleLimitAnimation: 20
   rotationDampingAnimation: 0.5
   audioManager: {fileID: 4822735872971178928}
