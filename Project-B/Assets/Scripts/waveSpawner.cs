@@ -103,5 +103,47 @@ public class waveSpawner : MonoBehaviour
 		StartWave(currentWaveIndex);
 	}
 
+	public void RestartWave()
+	{
+		// Destroy all active enemies
+		foreach (var enemy in activeEnemies)
+		{
+			if (enemy != null)
+			{
+				Destroy(enemy);
+			}
+		}
+		activeEnemies.Clear(); // Clear the list of active enemies
+
+		//set every as not yet spawned
+		foreach(var enemyspawninfo in waves[currentWaveIndex].enemies)
+		{
+			enemyspawninfo.spawned = false;
+		}
+
+		//remove bullets etc
+		GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+		foreach (GameObject enemy in enemies)
+		{
+			GameObject.Destroy(enemy);
+		}
+
+		// Stop the current wave and wait for the next one
+		waitingForNextWave = true;
+		waveTimer = 0; // Reset the wave timer
+
+		// Invoke the method to start the next wave after a 30-second delay
+		StartCoroutine(RestartWaveEnumerator());
+	}
+
+	IEnumerator RestartWaveEnumerator()
+	{
+		Debug.Log("wave restarted");
+		waitingForNextWave = true;
+		yield return new WaitForSeconds(waves[currentWaveIndex].nextWaveSeconds); // Wait for 30 seconds
+
+		currentWaveIndex = currentWaveIndex % waves.Count;
+		StartWave(currentWaveIndex);
+	}
 
 }

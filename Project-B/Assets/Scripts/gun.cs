@@ -54,6 +54,7 @@ public class gun : MonoBehaviour
   public UnityEvent OnShootMinigun;
   public UnityEvent OnShootShotgun;
   public UnityEvent OnShootLasergun;
+  public UnityEvent OnChargeLasergun;
 
   [Header("Animation")]
   public float angleLimitAnimation = 2f;
@@ -173,7 +174,9 @@ public class gun : MonoBehaviour
         //charging
         if (shooting && currentAmmoCan != null && currentAmmoCan.currentAmmoCount > 0)
 				{
-          if (!audioManager.IsSoundPlaying("LaserChargeUp"))
+          OnChargeLasergun?.Invoke();
+
+					if (!audioManager.IsSoundPlaying("LaserChargeUp"))
           {
             audioManager.PlaySound("LaserChargeUp");
           }

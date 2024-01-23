@@ -86,7 +86,7 @@ public class EnemyBullet : MonoBehaviour, IDamageable
 				if (submarine != null)
 				{
 					OnHitSubmarine?.Invoke();
-					submarine.hp--; // Decrease the hp of the Submarine
+					submarine.TakeDamage(damage);
 				}
 
 				// Bullet hits something, so disable its MeshRenderer and stop it from moving
