@@ -33,8 +33,6 @@ public class Submarine : MonoBehaviour
 
 	private void Update()
 	{
-		Debug.Log(hp);
-		Debug.Log(damagedHp);
 		if (damagedHp <= 0) {
 			PlayerDied();
 		}

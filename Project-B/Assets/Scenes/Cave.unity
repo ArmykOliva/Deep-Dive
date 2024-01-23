@@ -3377,6 +3377,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.356
       objectReference: {fileID: 0}
+    - target: {fileID: 1562521771471985043, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8497868988247112206, guid: a37b8338740660842827523e3b01367a,
+        type: 3}
     - target: {fileID: 2042465432548873413, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3637,6 +3643,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Submarine
       objectReference: {fileID: 0}
+    - target: {fileID: 2989258163618350767, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8497868988247112206, guid: a37b8338740660842827523e3b01367a,
+        type: 3}
+    - target: {fileID: 3624208080737545561, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624208080737545561, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[5]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c94382804033248a64d5432ee6c2ac, type: 2}
+    - target: {fileID: 3624208080737545561, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[6]
+      value: 
+      objectReference: {fileID: 2100000, guid: 52c94382804033248a64d5432ee6c2ac, type: 2}
     - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: spreadAngle
