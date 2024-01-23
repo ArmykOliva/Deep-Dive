@@ -5,13 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class Crack
-{
-	public GameObject crackObject;
-	public int damageHp;
-}
-
 public class Submarine : MonoBehaviour
 {
 	public int maxHp = 100;
@@ -20,7 +13,7 @@ public class Submarine : MonoBehaviour
 	public Animator lightAnimator;
 	public Animator panelAnimator;
 	public waveSpawner waveSpawner;
-	public List<Crack> cracks;
+	public List<CrackFix> cracks;
 
 	[Header("death ui")]
 	public Image blackScreen;
@@ -40,6 +33,8 @@ public class Submarine : MonoBehaviour
 
 	private void Update()
 	{
+		Debug.Log(hp);
+		Debug.Log(damagedHp);
 		if (damagedHp <= 0) {
 			PlayerDied();
 		}
@@ -53,13 +48,18 @@ public class Submarine : MonoBehaviour
 
 		CreateDamage();
 	}
+	public void Fix(CrackFix fixedCrack)
+	{
+		damagedHp += fixedCrack.damageHp;
+		hp += fixedCrack.damageHp;
+	}
 
 	private void CreateDamage()
 	{
 		///iterate randomly but with largest damageHp on top
 		// Filter out cracks where crackPrefab is not active, then sort and shuffle
 		var activeCracks = cracks
-				.Where(crack => !crack.crackObject.activeSelf) // Filtering active crackPrefabs
+				.Where(crack => !crack.gameObject.activeSelf) // Filtering active crackPrefabs
 				.OrderByDescending(crack => crack.damageHp)
 				.ToList();
 
@@ -73,7 +73,7 @@ public class Submarine : MonoBehaviour
 			if (hp - damagedHp <= -crack.damageHp)
 			{
 				damagedHp -= crack.damageHp;
-				crack.crackObject.SetActive(true);
+				crack.gameObject.SetActive(true);
 			}
 		}
 	}
@@ -87,7 +87,7 @@ public class Submarine : MonoBehaviour
 
 		foreach (var crack in cracks)
 		{
-			crack.crackObject.SetActive(false);
+			crack.gameObject.SetActive(false);
 		}
 
 		StartCoroutine(FadeToBlack());

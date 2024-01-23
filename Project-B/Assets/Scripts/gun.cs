@@ -34,7 +34,7 @@ public class gun : MonoBehaviour
   public float laserMaxChargeTime = 1.0f;
 
   [Header("Gun ammo")]
-  public PlacePoint ammoCanPlacePoint; /// TODO: GUN SWAPPING, basically we check in the place point if he has Ammo script component, and then we change gun based o n the placed object. Mabe we can use the onplace event in code. https://earnestrobot.notion.site/Place-Points-e6361a414928450dbb53d76fd653cf9a. I would add the event just like onsqueeze here in code and check what tag the grabbable has.
+  public PlacePoint ammoCanPlacePoint;
 
   [Header("Gun controller")]
   public Transform gunAim;
