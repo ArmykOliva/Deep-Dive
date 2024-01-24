@@ -228,6 +228,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 571543466644564491}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnRemove:
     m_PersistentCalls:
       m_Calls:
@@ -5180,7 +5192,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.038
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5232,7 +5244,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e5c42f90e02e8c04cb82d54af9b9a30a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.671
+  m_Volume: 0.86
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5241,7 +5253,7 @@ AudioSource:
   Priority: 216
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 2
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
