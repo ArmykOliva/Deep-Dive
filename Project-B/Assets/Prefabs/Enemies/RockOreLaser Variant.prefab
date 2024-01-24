@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2693686941126089716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1591206469057222299, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: orePrefab
+      value: 
+      objectReference: {fileID: 7103883207917530864, guid: d48736dd08f4ecd459f1d2198068d8d1,
+        type: 3}
+    - target: {fileID: 4496523863971058293, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: rockPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 4140407861785783584, guid: 5bc3cc7c64301d443a6748db142c5802,
+        type: 3}
+    - target: {fileID: 4496523863971058293, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: rockPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7177364838062353398, guid: c32de40d6b7e19844ab03a7a51b58b03,
+        type: 3}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045801492633630317, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
+        type: 3}
+      propertyPath: m_Name
+      value: RockOreLaser Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 860939e96fb2df74b970fef69f3fb15d, type: 3}

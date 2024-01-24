@@ -9,6 +9,9 @@ public class Sound
   public AudioClip[] clips;
   public float minPitch = 0.9f;
   public float maxPitch = 1.1f;
+  public float spatialBlend = 0.5f;
+  public float minDistance = 0.7f;
+  public float maxDisatance = 50.0f;
 }
 
 public class AudioManager : MonoBehaviour
@@ -26,7 +29,7 @@ public class AudioManager : MonoBehaviour
     foreach (var sound in sounds)
     {
       AudioSource source = gameObject.AddComponent<AudioSource>();
-			source.spatialBlend = 1.0f; // Ensure the sound is fully 3D
+			source.spatialBlend = 0.5f; // Ensure the sound is fully 3D
 			source.minDistance = 0.7f; // The distance within which the volume is at its maximum
 			source.maxDistance = 50.0f; // The maximum distance at which the sound is still audible
 			

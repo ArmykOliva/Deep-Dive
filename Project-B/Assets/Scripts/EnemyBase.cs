@@ -17,9 +17,9 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
   public UnityEvent OnHit;
   public UnityEvent OnDie;
   public UnityEvent OnAttack;
-
-  private Renderer rend;
-  private Material normalMaterial;
+  
+  protected Renderer rend;
+	protected Material normalMaterial;
   private float flashDuration = 0.1f; // Duration of the flash effect
   private Texture originalTexture;
 

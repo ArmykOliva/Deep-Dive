@@ -13,10 +13,9 @@ public class Rock : EnemyBase
 	public float rotationSpeedMax = 50f; // Maximum rotation speed
 
 	public UnityEvent OnHitSubmarine;
-	public MeshRenderer projectileMeshRenderer; // Assign this in the inspector
 
+	private MeshRenderer projectileMeshRenderer; // Assign this in the inspector
 	private bool hasHit = false; // To check if the bullet has hit something
-
 	private float rotationSpeed; // Actual rotation speed
 	private GameObject rockInstance;
 	private Vector3 rotationAxis;        // Axis of rotation
@@ -53,6 +52,13 @@ public class Rock : EnemyBase
 
 		// Choose a random rotation axis
 		rotationAxis = Random.onUnitSphere; // This gives a random direction vector
+
+		//for flashing
+		rend = rockInstance.GetComponent<Renderer>();
+		if (rend != null)
+		{
+			normalMaterial = rend.material; // Set normalMaterial to the current material
+		}
 	}
 
 	void Update()
