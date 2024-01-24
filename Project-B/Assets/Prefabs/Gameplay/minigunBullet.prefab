@@ -5245,7 +5245,7 @@ PrefabInstance:
     - target: {fileID: 6120056526432084975, guid: d2ef47fa709525e46a1b9414282f650d,
         type: 3}
       propertyPath: sounds.Array.data[0].spatialBlend
-      value: 0.9
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6120056526432084975, guid: d2ef47fa709525e46a1b9414282f650d,
         type: 3}

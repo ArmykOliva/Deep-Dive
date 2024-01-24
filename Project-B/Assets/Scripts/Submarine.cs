@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Submarine : MonoBehaviour
@@ -19,6 +20,8 @@ public class Submarine : MonoBehaviour
 	public Image blackScreen;
 	public TextMeshProUGUI deathText;
 	public float fadeDuration = 2f;
+
+	public UnityEvent onHit;
 
 	private bool dead = false;
 	private int damagedHp;
@@ -43,6 +46,7 @@ public class Submarine : MonoBehaviour
 		hp -= damage;
 		lightAnimator.SetTrigger("Fade");
 		panelAnimator.SetTrigger("Fade");
+		onHit?.Invoke();
 
 		CreateDamage();
 	}

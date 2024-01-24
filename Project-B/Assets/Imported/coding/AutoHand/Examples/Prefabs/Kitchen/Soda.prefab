@@ -157,7 +157,7 @@ MonoBehaviour:
   isGrabbable: 1
   CopySettings: {fileID: 0}
   grabType: 0
-  handType: 1
+  handType: 0
   singleHandOnly: 1
   allowHeldSwapping: 1
   instantGrab: 1
