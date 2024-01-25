@@ -105,10 +105,7 @@ public class AIRobotController : MonoBehaviour
 
 	public void StartTalking()
 	{
-		if (talkingCoroutine != null)
-		{
-			StopCoroutine(talkingCoroutine);
-		}
+		if (talkingCoroutine != null) return;
 		talkingCoroutine = StartCoroutine(Talking());
 	}
 
@@ -133,6 +130,8 @@ public class AIRobotController : MonoBehaviour
 			{
 				intensity -= talkSpeed * Time.deltaTime;
 				renderer.material.SetColor("_EmissionColor", originalEmissionColor * intensity);
+				Debug.Log(intensity);
+				yield return null;
 			}
 
 			// increase intensity
@@ -140,6 +139,7 @@ public class AIRobotController : MonoBehaviour
 			{
 				intensity += talkSpeed * Time.deltaTime;
 				renderer.material.SetColor("_EmissionColor", originalEmissionColor * intensity);
+				yield return null;
 			}
 		}
 	}
