@@ -4304,6 +4304,12 @@ PrefabInstance:
       propertyPath: endPoint
       value: 
       objectReference: {fileID: 467696929}
+    - target: {fileID: 1486193492048509874, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6807916706230706391, guid: fa7a7f7000518254886dda66c1d1d9fb,
+        type: 3}
     - target: {fileID: 1562521771471985043, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: m_Mesh
@@ -6843,55 +6849,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4310054616697831809, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5175946868848973684, guid: 6facd790ae8b1db4b8f88595bacb5674,
         type: 3}
       propertyPath: m_Name
       value: Ambient Particles
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.b
-      value: 0.72350335
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.r
-      value: 0.3226415
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minMaxState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startRotation.minScalar
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
