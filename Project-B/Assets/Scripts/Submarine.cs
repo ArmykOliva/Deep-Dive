@@ -22,6 +22,7 @@ public class Submarine : MonoBehaviour
 	public float fadeDuration = 2f;
 
 	public UnityEvent onHit;
+	public UnityEvent onDeath;
 
 	private bool dead = false;
 	private int damagedHp;

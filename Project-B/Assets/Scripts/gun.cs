@@ -52,6 +52,8 @@ public class gun : MonoBehaviour
     public UnityEvent OnShootShotgun;
     public UnityEvent OnShootLasergun;
     public UnityEvent OnChargeLasergun;
+  public UnityEvent onStopShooting;
+
 
     [Header("Animation")] public float angleLimitAnimation = 2f;
     public float rotationDampingAnimation = 0.2f;
@@ -170,11 +172,12 @@ public class gun : MonoBehaviour
                 //charging
                 if (shooting && currentAmmoCan != null && currentAmmoCan.currentAmmoCount > 0)
                 {
-                    OnChargeLasergun?.Invoke();
+           
 
                     if (!audioManager.IsSoundPlaying("LaserChargeUp"))
                     {
-                        audioManager.PlaySound("LaserChargeUp");
+						          OnChargeLasergun?.Invoke();
+						          audioManager.PlaySound("LaserChargeUp");
                     }
 
                     fireTimer = Math.Min(laserMaxChargeTime, fireTimer + Time.deltaTime);
@@ -267,7 +270,9 @@ public class gun : MonoBehaviour
     private void HandleUnsqueeze(Hand hand, Grabbable grabbable)
     {
         shooting = false;
-    }
+    onStopShooting?.Invoke();
+
+		}
 
     private void HandleGrab(Hand hand, Grabbable grabbable)
     {

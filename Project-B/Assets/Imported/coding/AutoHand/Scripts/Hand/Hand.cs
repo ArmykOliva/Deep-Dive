@@ -812,13 +812,29 @@ namespace Autohand {
 
         /// <summary>Plays haptic vibration on the hand controller if supported by controller link</summary>
         public void PlayHapticVibration() {
-            PlayHapticVibration(0.05f, 0.5f);
+            try
+      {
+				PlayHapticVibration(0.05f, 0.5f);
+			} catch
+      {
+        Debug.Log("haptics no work");
+      }
+            
         }
 
         /// <summary>Plays haptic vibration on the hand controller if supported by controller link</summary>
         public void PlayHapticVibration(float duration) {
-            PlayHapticVibration(duration, 0.5f);
-        }
+            
+			try
+			{
+				PlayHapticVibration(duration, 0.5f);
+			}
+			catch
+			{
+        Debug.Log("haptics no work");
+
+			}
+		}
 
         /// <summary>Plays haptic vibration on the hand controller if supported by controller link</summary>
         public void PlayHapticVibration(float duration, float amp = 0.5f) {

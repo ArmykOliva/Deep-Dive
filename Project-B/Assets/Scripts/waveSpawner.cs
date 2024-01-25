@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
 public class EnemyWave
 {
 	public List<EnemySpawnInfo> enemies;
 	public int nextWaveSeconds;
+	public UnityEvent onThisWaveStart;
+	public UnityEvent onThisWaveStop;
 }
 
 [System.Serializable]
@@ -25,6 +28,9 @@ public class waveSpawner : MonoBehaviour
 	public EnemyBorder spawnBorder;
 	public EnemyBorder enemyBorder; // the border where the enemy will be moving most of the time
 	public EnemyBorder enemyBorderSubmarine; // the border where the enemy will be attacking (shooting, biting, charging...)
+
+	public UnityEvent onWaveStart;
+	public UnityEvent onWaveStop;
 
 	private int currentWaveIndex = 0;
 	private float waveTimer;
@@ -49,6 +55,8 @@ public class waveSpawner : MonoBehaviour
 		waveTimer = 0;
 		waitingForNextWave = false;
 		// Initialize things specific to the wave
+		onWaveStart?.Invoke();
+		waves[waveIndex].onThisWaveStart?.Invoke();
 	}
 
 	private void CheckForSpawns()
@@ -96,6 +104,8 @@ public class waveSpawner : MonoBehaviour
 	IEnumerator WaitAndStartNextWave()
 	{
 		Debug.Log("wave ended");
+		onWaveStop?.Invoke();
+		waves[currentWaveIndex].onThisWaveStop?.Invoke();
 		waitingForNextWave = true;
 		yield return new WaitForSeconds(waves[currentWaveIndex].nextWaveSeconds); // Wait for 30 seconds
 
