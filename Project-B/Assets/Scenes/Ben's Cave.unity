@@ -1117,6 +1117,12 @@ MonoBehaviour:
       spawnTime: 10
       spawned: 0
     nextWaveSeconds: 10
+    onThisWaveStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onThisWaveStop:
+      m_PersistentCalls:
+        m_Calls: []
   - enemies:
     - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
@@ -1143,6 +1149,12 @@ MonoBehaviour:
       spawnTime: 20
       spawned: 0
     nextWaveSeconds: 10
+    onThisWaveStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onThisWaveStop:
+      m_PersistentCalls:
+        m_Calls: []
   - enemies:
     - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
@@ -1177,9 +1189,21 @@ MonoBehaviour:
       spawnTime: 25
       spawned: 0
     nextWaveSeconds: 10
+    onThisWaveStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onThisWaveStop:
+      m_PersistentCalls:
+        m_Calls: []
   spawnBorder: {fileID: 1747890948}
   enemyBorder: {fileID: 175401939}
   enemyBorderSubmarine: {fileID: 1232511028}
+  onWaveStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onWaveStop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!23 &903139891
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3163,12 +3187,27 @@ PrefabInstance:
     - target: {fileID: 4310054616697831809, guid: 6facd790ae8b1db4b8f88595bacb5674,
         type: 3}
       propertyPath: m_Materials.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4310054616697831809, guid: 6facd790ae8b1db4b8f88595bacb5674,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 73512817ce2ad1e42af340e177cd44e7, type: 2}
     - target: {fileID: 5175946868848973684, guid: 6facd790ae8b1db4b8f88595bacb5674,
         type: 3}
       propertyPath: m_Name
       value: Ambient Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
+        type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
+        type: 3}
+      propertyPath: TrailModule.lifetime.scalar
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
         type: 3}
@@ -3178,7 +3217,22 @@ PrefabInstance:
     - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
         type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.06666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.a
+      value: 0.02745098
       objectReference: {fileID: 0}
     - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
         type: 3}

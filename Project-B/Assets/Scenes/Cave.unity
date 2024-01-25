@@ -4751,6 +4751,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8497868988247112206, guid: a37b8338740660842827523e3b01367a,
         type: 3}
+    - target: {fileID: 1601884033359032532, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2042465432548873413, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5204,8 +5209,198 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
+      propertyPath: maxAimDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
       propertyPath: minigunFireRate
       value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1400084990}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1400084988}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1400084987}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1400084986}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1400084985}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.ParticleSystem, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199315964244348232, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597704326456897522, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4775179804233914900, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
@@ -5237,16 +5432,206 @@ PrefabInstance:
       propertyPath: minigunFireRate
       value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1400084995}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1400084994}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1400084993}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1400084992}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1400084991}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.ParticleSystem, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
+      value: Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: onStopShooting.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140260310425009042, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6274417332290770135, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: endPoint
       value: 
       objectReference: {fileID: 655858414}
+    - target: {fileID: 6454790389773972374, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7463996508411958372, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: endPoint
       value: 
       objectReference: {fileID: 1709711096}
+    - target: {fileID: 8097858171220290736, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8297929437109920287, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5312,6 +5697,30 @@ Transform:
 --- !u!4 &1400084984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3127205670037381106, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1400084985 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8097858171220290736, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1400084986 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 968756961910112412, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1400084987 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7689499106674337309, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1400084988 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 454065649594966208, guid: 0f313eea19f9a08439101e0469d49f9a,
     type: 3}
   m_PrefabInstance: {fileID: 1400084982}
   m_PrefabAsset: {fileID: 0}
@@ -5411,6 +5820,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1400084990 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5978950893228919467, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1400084991 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6454790389773972374, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1400084992 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1920937150871137569, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1400084993 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1954854365169955141, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1400084994 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9047176471650492764, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1400084995 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7497083249895843220, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1406945742
 GameObject:
   m_ObjectHideFlags: 0
