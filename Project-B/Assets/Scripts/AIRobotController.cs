@@ -35,8 +35,6 @@ public class AIRobotController : MonoBehaviour
 		foreach (var namedClip in namedVoiceLines)
 		{
 			voiceLineDict[namedClip.name] = namedClip;
-			Debug.Log("fuck");
-			Debug.Log(namedClip.name);
 		}
 
 		currentState = State.WatchPlayer; // Default statedss
@@ -128,43 +126,26 @@ public class AIRobotController : MonoBehaviour
 	{
 		while (true) // Replace with a condition to stop talking if needed
 		{
-			// Increase intensity
-			float targetIntensity = maxIntensity + Random.Range(0, threshold);
-			while (GetEmissionIntensity() < targetIntensity)
+			// decrease intensity
+			float targetIntensity = minIntensity + Random.Range(0, threshold);
+			float intensity = maxIntensity;
+			while (intensity > targetIntensity)
 			{
-				IncreaseIntensity(talkSpeed);
-				yield return null;
+				intensity -= talkSpeed * Time.deltaTime;
+				renderer.material.SetColor("_EmissionColor", originalEmissionColor * intensity);
 			}
 
-			// Decrease intensity
-			targetIntensity = minIntensity - Random.Range(0, threshold);
-			while (GetEmissionIntensity() > targetIntensity)
+			// increase intensity
+			while (intensity < maxIntensity)
 			{
-				DecreaseIntensity(talkSpeed);
-				yield return null;
+				intensity += talkSpeed * Time.deltaTime;
+				renderer.material.SetColor("_EmissionColor", originalEmissionColor * intensity);
 			}
 		}
 	}
 
-	void IncreaseIntensity(float speed)
-	{
-		float currentIntensity = GetEmissionIntensity();
-		renderer.material.SetColor("_EmissionColor", originalEmissionColor * Mathf.Clamp(currentIntensity + speed * Time.deltaTime, minIntensity, maxIntensity));
-	}
-
-	void DecreaseIntensity(float speed)
-	{
-		float currentIntensity = GetEmissionIntensity();
-		renderer.material.SetColor("_EmissionColor", originalEmissionColor * Mathf.Clamp(currentIntensity - speed * Time.deltaTime, minIntensity, maxIntensity));
-	}
-
-	float GetEmissionIntensity()
-	{
-		return renderer.material.GetColor("_EmissionColor").maxColorComponent; // Assuming the emission color is uniform
-	}
-
 	void ResetEmissionColor()
 	{
-		renderer.material.SetColor("_EmissionColor", originalEmissionColor);
+		renderer.material.SetColor("_EmissionColor", originalEmissionColor * 1f	);
 	}
 }
