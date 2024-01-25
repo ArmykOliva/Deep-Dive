@@ -75,15 +75,14 @@ public class AmmoDispenser : MonoBehaviour
 			Debug.Log(oreCounts[type]);
 			while (oreCounts[type] >= 10)
 			{
+				// Wait for 0.5 seconds before spawning the next ammo
+				yield return new WaitForSeconds(0.5f);
 				oreCounts[type] -= 10;
 				onAmmoCanSpawn?.Invoke();
 				if (ammoPrefabs.TryGetValue(type, out GameObject prefab))
 				{
 					Instantiate(prefab, ammoCanSpawnPoint.position, Quaternion.identity); // Spawn the specific ammo prefab
-				}
-
-				// Wait for 0.5 seconds before spawning the next ammo
-				yield return new WaitForSeconds(0.5f);
+				}	
 			}
 		}
 		spawninAmmo = false;
