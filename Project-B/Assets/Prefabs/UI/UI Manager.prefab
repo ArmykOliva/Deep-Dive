@@ -150,8 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceUI: {fileID: 8708351200784871471}
-  ammoUI: {fileID: 0}
-  gunNameUI: {fileID: 0}
+  ammoUI: {fileID: 2167857353100604906}
+  gunNameUI: {fileID: 8330264323400952565}
+  Gun: {fileID: 0}
   progressTracker: {fileID: 0}
 --- !u!1 &3507794989234469073
 GameObject:

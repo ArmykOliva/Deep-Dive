@@ -3115,9 +3115,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1591137203}
+  - {fileID: 212170018}
   - {fileID: 1160234427}
   - {fileID: 984598837}
-  - {fileID: 212170018}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2024129153 stripped
@@ -3184,85 +3184,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4310054616697831809, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4310054616697831809, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 73512817ce2ad1e42af340e177cd44e7, type: 2}
     - target: {fileID: 5175946868848973684, guid: 6facd790ae8b1db4b8f88595bacb5674,
         type: 3}
       propertyPath: m_Name
       value: Ambient Particles
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: NoiseModule.strength.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: TrailModule.lifetime.scalar
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.06666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.a
-      value: 0.02745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.b
-      value: 0.72350335
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minColor.r
-      value: 0.3226415
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startColor.minMaxState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5419138407558707662, guid: 6facd790ae8b1db4b8f88595bacb5674,
-        type: 3}
-      propertyPath: InitialModule.startRotation.minScalar
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
