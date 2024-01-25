@@ -21,16 +21,14 @@ public class AIRobotController : MonoBehaviour
 	public float idleMovementFrequency = 2f;
 	private float lastMoveTime;
 
-	public float talkSpeed = 1f;
-	public float maxIntensity = 2f;
-	public float minIntensity = 0.5f;
-	public float threshold = 0.3f;
 	private Color originalEmissionColor;
-	private Renderer renderer;
-	private bool talking = false;
 	private float intensity;
-	private float targetIntensity = 1f;
-	private Coroutine talkingCoroutine;
+
+	private float[] audioSampleData;
+	private const int sampleDataLength = 1024; // Length of the audio sample array
+
+	// Intensity of the audio, ranges from 0 to 1
+	public float audioIntensity { get; private set; }
 
 	private State currentState;
 
@@ -43,10 +41,8 @@ public class AIRobotController : MonoBehaviour
 
 		currentState = State.WatchPlayer; // Default statedss
 
-		renderer = GetComponent<Renderer>();
-		intensity = maxIntensity;
-		targetIntensity = intensity;
 		originalEmissionColor = lightMaterial.GetColor("_EmissionColor");
+		audioSampleData = new float[sampleDataLength];
 	}
 
 	void Update()
@@ -58,24 +54,32 @@ public class AIRobotController : MonoBehaviour
 				break;
 			case State.GotoPlayer:
 				MoveToPlayer();
+
 				break;
 			case State.MoveAroundIdle:
 				IdleMovement();
 				break;
 		}
 
-		if (GetComponent<AudioSource>().isPlaying)
+		AudioSource audioSource = GetComponent<AudioSource>();
+		if (audioSource.isPlaying)
 		{
-			if (intensity > targetIntensity)
+			audioSource.GetOutputData(audioSampleData, 0);
+			float sum = 0;
+
+			// Calculate the RMS value
+			for (int i = 0; i < audioSampleData.Length; i++)
 			{
-				intensity -= talkSpeed * Time.deltaTime;
-				if (intensity <= targetIntensity) targetIntensity = maxIntensity - Random.Range(0, threshold);
-			} else
-			{
-				intensity += talkSpeed * Time.deltaTime;
-				if (intensity >= targetIntensity) targetIntensity = minIntensity + Random.Range(0, threshold);
+				sum += audioSampleData[i] * audioSampleData[i]; // Sum of squares
 			}
-			intensity = Mathf.Clamp(intensity, 0f, maxIntensity);
+			float rmsValue = Mathf.Sqrt(sum / audioSampleData.Length); // RMS = square root of average
+
+			// Convert RMS to a 0-1 intensity value. You might need to adjust the reference intensity according to your needs.
+			float referenceIntensity = 0.1f; // Adjust this value to your desired "full" intensity
+			audioIntensity = Mathf.Clamp01(rmsValue / referenceIntensity);
+
+			intensity = 1f + audioIntensity*3;
+
 		} else
 		{
 			intensity = 1f;

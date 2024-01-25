@@ -1026,6 +1026,16 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 1130945285}
+    - target: {fileID: 1458199743217616472, guid: 050136db30956ae4497dfbfcded9e1bb,
+        type: 3}
+      propertyPath: namedVoiceLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458199743217616472, guid: 050136db30956ae4497dfbfcded9e1bb,
+        type: 3}
+      propertyPath: namedVoiceLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f4aac0be463ec14a932946e9302eb56, type: 3}
     - target: {fileID: 4625803536474897518, guid: 050136db30956ae4497dfbfcded9e1bb,
         type: 3}
       propertyPath: m_Name
@@ -1083,6 +1093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3015356892739702768, guid: 050136db30956ae4497dfbfcded9e1bb, type: 3}
+    - {fileID: 2562893359514289218, guid: 050136db30956ae4497dfbfcded9e1bb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3243,7 +3254,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 385ee25ff60c89c4abb9c441ab7c361e, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3685,8 +3696,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 903139893}
-  - component: {fileID: 903139892}
-  - component: {fileID: 903139891}
   - component: {fileID: 903139889}
   m_Layer: 0
   m_Name: WaveSpawner
@@ -3709,10 +3718,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemies: []
-    nextWaveSeconds: 40
+    nextWaveSeconds: 10
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls: []
+    onThisWaveStop:
+      m_PersistentCalls:
+        m_Calls: []
+  - enemies: []
+    nextWaveSeconds: 13
+    onThisWaveStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 315281600}
+          m_TargetAssemblyTypeName: AIRobotController, Assembly-CSharp
+          m_MethodName: PlayVoiceLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Welcome_Message
+            m_BoolArgument: 0
+          m_CallState: 2
     onThisWaveStop:
       m_PersistentCalls:
         m_Calls: []
@@ -3748,19 +3777,7 @@ MonoBehaviour:
     nextWaveSeconds: 30
     onThisWaveStart:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 315281600}
-          m_TargetAssemblyTypeName: AIRobotController, Assembly-CSharp
-          m_MethodName: PlayVoiceLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: dukeNukem
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     onThisWaveStop:
       m_PersistentCalls:
         m_Calls: []
@@ -4005,56 +4022,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!23 &903139891
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903139888}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &903139892
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903139888}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &903139893
 Transform:
   m_ObjectHideFlags: 0
