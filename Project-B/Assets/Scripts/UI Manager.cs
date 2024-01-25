@@ -12,8 +12,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text ammoUI;
     public TMP_Text gunNameUI;
 
-    public PlacePoint AmmoPlacePoint;
-    
+    public gun Gun;
 
     public ProgressTracker progressTracker;
     
@@ -33,6 +32,8 @@ public class UIManager : MonoBehaviour
 
     void UpdateAmmoUI()
     {
-        
+        ammoUI.text = Gun.getAmmoCount().ToString();
+        gunNameUI.text = Gun.getGunType();
     }
+    
 }
