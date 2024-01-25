@@ -35,6 +35,7 @@ public class AIRobotController : MonoBehaviour
 		foreach (var namedClip in namedVoiceLines)
 		{
 			voiceLineDict[namedClip.name] = namedClip;
+			Debug.Log("fuck");
 			Debug.Log(namedClip.name);
 		}
 
@@ -85,13 +86,11 @@ public class AIRobotController : MonoBehaviour
 
 	public void PlayVoiceLine(string name)
 	{
-		Debug.Log(name);
 		if (voiceLineDict.TryGetValue(name, out AudioClip clip))
 		{
-			Debug.Log("player");
 			GetComponent<AudioSource>().PlayOneShot(clip);
 			StartTalking();
-			StartCoroutine(StopTalkingAfterDelay(clip.length));
+			//StartCoroutine(StopTalkingAfterDelay(clip.length));
 		}
 	}
 	IEnumerator StopTalkingAfterDelay(float delay)

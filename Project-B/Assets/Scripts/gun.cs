@@ -382,7 +382,7 @@ public class gun : MonoBehaviour
 
     public int getAmmoCount()
     {
-        if (currentAmmoCan.currentAmmoCount <= 0)
+        if (currentAmmoCan == null)
         {
             return 0;
         }
