@@ -11,14 +11,7 @@ public class AIRobotController : MonoBehaviour
 		MoveAroundIdle
 	}
 
-	[System.Serializable]
-	public struct NamedAudioClip
-	{
-		public string name;
-		public AudioClip clip;
-	}
-
-	public NamedAudioClip[] namedVoiceLines;
+	public List<AudioClip> namedVoiceLines;
 	private Dictionary<string, AudioClip> voiceLineDict = new Dictionary<string, AudioClip>();
 
 	public Transform playerTransform;
@@ -41,7 +34,8 @@ public class AIRobotController : MonoBehaviour
 	{
 		foreach (var namedClip in namedVoiceLines)
 		{
-			voiceLineDict[namedClip.name] = namedClip.clip;
+			voiceLineDict[namedClip.name] = namedClip;
+			Debug.Log(namedClip.name);
 		}
 
 		currentState = State.WatchPlayer; // Default statedss
@@ -68,6 +62,7 @@ public class AIRobotController : MonoBehaviour
 
 	void LookAtPlayer()
 	{
+		if (playerTransform == null) return;
 		Vector3 direction = (playerTransform.position - transform.position).normalized;
 		Quaternion lookRotation = Quaternion.LookRotation(direction);
 		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
@@ -90,10 +85,19 @@ public class AIRobotController : MonoBehaviour
 
 	public void PlayVoiceLine(string name)
 	{
+		Debug.Log(name);
 		if (voiceLineDict.TryGetValue(name, out AudioClip clip))
 		{
+			Debug.Log("player");
 			GetComponent<AudioSource>().PlayOneShot(clip);
+			StartTalking();
+			StartCoroutine(StopTalkingAfterDelay(clip.length));
 		}
+	}
+	IEnumerator StopTalkingAfterDelay(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+		StopTalking();
 	}
 
 	// Method to change state externally

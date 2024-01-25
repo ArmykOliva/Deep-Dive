@@ -1141,6 +1141,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dc80c5978ae094b8d1695e009147d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namedVoiceLines:
+  - {fileID: 8300000, guid: c94fa8de5224938489aa5db00cd55f57, type: 3}
+  playerTransform: {fileID: 1130945285}
+  rotationSpeed: 5
+  movementSpeed: 2
+  idleMovementFrequency: 2
+  talkSpeed: 1
+  maxIntensity: 2
+  minIntensity: 0.5
+  threshold: 0.3
 --- !u!1 &335060307 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8907650898414820959, guid: 1903c4fbce55f0745b2b830b12693fc0,
@@ -2927,7 +2937,19 @@ MonoBehaviour:
         m_Calls: []
     onThisWaveStop:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 315281600}
+          m_TargetAssemblyTypeName: AIRobotController, Assembly-CSharp
+          m_MethodName: PlayVoiceLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: dukeNukem
+            m_BoolArgument: 0
+          m_CallState: 2
   - enemies:
     - enemyPrefab: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
         type: 3}
@@ -2960,7 +2982,19 @@ MonoBehaviour:
     nextWaveSeconds: 30
     onThisWaveStart:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 315281600}
+          m_TargetAssemblyTypeName: AIRobotController, Assembly-CSharp
+          m_MethodName: PlayVoiceLine
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: dukeNukem
+            m_BoolArgument: 0
+          m_CallState: 2
     onThisWaveStop:
       m_PersistentCalls:
         m_Calls: []
@@ -3846,6 +3880,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb9ea98df702eb740890ff558059bc14, type: 3}
+--- !u!4 &1130945285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2483497940497067375, guid: dbd626ebc18326040894e6e49499983a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1367168233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1139768979
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,6 +4083,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dc80c5978ae094b8d1695e009147d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namedVoiceLines: []
+  playerTransform: {fileID: 0}
+  rotationSpeed: 5
+  movementSpeed: 2
+  idleMovementFrequency: 2
+  talkSpeed: 1
+  maxIntensity: 2
+  minIntensity: 0.5
+  threshold: 0.3
 --- !u!114 &1202241328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4055,6 +4104,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dc80c5978ae094b8d1695e009147d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  namedVoiceLines: []
+  playerTransform: {fileID: 0}
+  rotationSpeed: 5
+  movementSpeed: 2
+  idleMovementFrequency: 2
+  talkSpeed: 1
+  maxIntensity: 2
+  minIntensity: 0.5
+  threshold: 0.3
 --- !u!114 &1232511028 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4732538597291140834, guid: 0f313eea19f9a08439101e0469d49f9a,
