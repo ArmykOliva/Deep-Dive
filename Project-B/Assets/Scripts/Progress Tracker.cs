@@ -26,7 +26,7 @@ public class ProgressTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*progress = (float) ((timeDuration - time) / timeDuration)*100;
+        progress = (float) ((timeDuration - time) / timeDuration)*100;
         if (time > 0)
         {
             time -= Time.deltaTime;
@@ -34,7 +34,7 @@ public class ProgressTracker : MonoBehaviour
         else
         {
             //Load Scene
-        }*/
+        }
     }
 
     public float getProgress()
