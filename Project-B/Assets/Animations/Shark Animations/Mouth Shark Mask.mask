@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mouth Shark Mask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Great White Shark
+    m_Weight: 0
+  - m_Path: Great White Shark Bones
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Head
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Head/Lower Jaw
+    m_Weight: 1
+  - m_Path: Great White Shark Bones/Head/Lower Jaw/Lower Jaw_end
+    m_Weight: 1
+  - m_Path: Great White Shark Bones/Head/Upper Jaw
+    m_Weight: 1
+  - m_Path: Great White Shark Bones/Head/Upper Jaw/Upper Jaw_end
+    m_Weight: 1
+  - m_Path: Great White Shark Bones/Spine 1
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Spine 1/Left Fin
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Spine 1/Left Fin/Left Fin_end
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Spine 1/Right Fin
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Spine 1/Right Fin/Right Fin_end
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Spine 1/Spine 2
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Spine 1/Spine 2/Spine 3
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Spine 1/Spine 2/Spine 3/Spine 4
+    m_Weight: 0
+  - m_Path: Great White Shark Bones/Spine 1/Spine 2/Spine 3/Spine 4/Spine 4_end
+    m_Weight: 0
