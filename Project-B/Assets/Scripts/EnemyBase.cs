@@ -22,6 +22,7 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
 	protected Material normalMaterial;
   private float flashDuration = 0.1f; // Duration of the flash effect
   private Texture originalTexture;
+  protected bool dead;
 
 	void Start()
   {
@@ -82,7 +83,19 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
   protected virtual void Die()
   {
     OnDie?.Invoke();
-    // Implement death logic here
+    dead = true;
+    rend.enabled = false;
+    GetComponent<Collider>().enabled = false;
+    // Start the coroutine to delay destruction
+    StartCoroutine(DelayedDestruction());
+  }
+
+  private IEnumerator DelayedDestruction()
+  {
+    // Wait for 2 seconds
+    yield return new WaitForSeconds(2f);
+
+    // Destroy the game object after the delay
     Destroy(gameObject);
   }
 }

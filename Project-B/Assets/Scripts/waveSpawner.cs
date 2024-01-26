@@ -57,6 +57,14 @@ public class waveSpawner : MonoBehaviour
 		// Initialize things specific to the wave
 		onWaveStart?.Invoke();
 		waves[waveIndex].onThisWaveStart?.Invoke();
+
+		AmmoCan[] ammoCans = FindObjectsOfType<AmmoCan>();
+
+		// Iterate through each AmmoCan instance and call SetAmmoBack
+		foreach (AmmoCan ammoCan in ammoCans)
+		{
+			ammoCan.setAmmoLastWave();
+		}
 	}
 
 	private void CheckForSpawns()
@@ -109,8 +117,9 @@ public class waveSpawner : MonoBehaviour
 		waitingForNextWave = true;
 		yield return new WaitForSeconds(waves[currentWaveIndex].nextWaveSeconds); // Wait for 30 seconds
 
-		currentWaveIndex = (currentWaveIndex + 1) % waves.Count;
-		StartWave(currentWaveIndex);
+		currentWaveIndex = currentWaveIndex + 1;
+		if (currentWaveIndex < waves.Count)
+			StartWave(currentWaveIndex);
 	}
 
 	public void RestartWave()
@@ -150,7 +159,7 @@ public class waveSpawner : MonoBehaviour
 	{
 		Debug.Log("wave restarted");
 		waitingForNextWave = true;
-		yield return new WaitForSeconds(waves[currentWaveIndex].nextWaveSeconds); // Wait for 30 seconds
+		yield return new WaitForSeconds(10f); // Wait for 30 seconds
 
 		currentWaveIndex = currentWaveIndex % waves.Count;
 		StartWave(currentWaveIndex);

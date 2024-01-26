@@ -67,7 +67,7 @@ public class EnemyBullet : MonoBehaviour, IDamageable
 		}
 
 		//enable and siable collider
-		if (!active)
+		if (active)
 		{
 			if (bulletCollider != null) bulletCollider.enabled = true;
 		} else
@@ -131,7 +131,7 @@ public class EnemyBullet : MonoBehaviour, IDamageable
     if (active)
     {
 			hp--;
-			if (hp < 0) Destroy(gameObject);
+			if (hp <= 0) Destroy(gameObject);
 		} 
 	}
 }

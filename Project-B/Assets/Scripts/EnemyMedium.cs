@@ -38,6 +38,11 @@ public class EnemyMedium : EnemyBase
 
 	void Update()
 	{
+		if (dead)
+		{
+			if (currentBeak != null) Destroy(currentBeak);
+			return;
+		}
 		switch 	(currentState)
 		{
 			case EnemyMediumState.generateRandomPoint:

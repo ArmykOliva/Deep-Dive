@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4663456511927787652}
   - component: {fileID: 4996114100519631376}
   - component: {fileID: 2531103451405558733}
+  - component: {fileID: 4329330698272063293}
   m_Layer: 12
   m_Name: LionfishBeak
   m_TagString: Enemy
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc86db246d2a03479ebf3b6ef9a7da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   hp: 1
   damage: 5
   maxDistance: 100
@@ -204,6 +205,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &4329330698272063293
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954491998882235155}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.14203638, y: 0.19150203, z: 0.4884489}
+  m_Center: {x: -0.00094905496, y: 0.000056892633, z: 0.09917836}
 --- !u!1 &2946458458807771314
 GameObject:
   m_ObjectHideFlags: 0
@@ -5045,7 +5067,6 @@ GameObject:
   - component: {fileID: 2357477618193900824}
   - component: {fileID: 1664268020692724413}
   - component: {fileID: 3529799268149649015}
-  - component: {fileID: 8314691383377965997}
   m_Layer: 12
   m_Name: LionfishBeak
   m_TagString: Untagged
@@ -5118,25 +5139,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8314691383377965997
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3169586133777645474}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 4d491f348b8bf1e45a7365c0b9e6c1cb, type: 3}
