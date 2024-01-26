@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  hp: 3
+  hp: 1
   damage: 5
   maxDistance: 100
   active: 0

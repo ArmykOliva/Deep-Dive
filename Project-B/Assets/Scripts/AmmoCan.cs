@@ -6,11 +6,13 @@ public class AmmoCan : MonoBehaviour
 {
     public GunType ammoType;
     public int ammoCount = 50;
+  
 
     //[HideInInspector] 
     public int currentAmmoCount;
+    private int ammoAtLastWave;
 
-    private Material instanceMaterial;
+  private Material instanceMaterial;
     private Renderer objectRenderer;
     private MaterialPropertyBlock propBlock;
     private Color originalEmissionColor;
@@ -34,12 +36,13 @@ public class AmmoCan : MonoBehaviour
         originalEmissionColor = renderer.material.GetColor("_EmissionColor");
 
         originalEmissionIntensity = 0.4f;
+    setAmmoLastWave();
     }
 
     void Update()
     {
         float normalizedAmmoCount = (float)currentAmmoCount / (float)ammoCount;
-        renderer.material.SetColor("_EmissionColor",originalEmissionColor*normalizedAmmoCount);
+        renderer.material.SetColor("_EmissionColor",originalEmissionColor*normalizedAmmoCount*0.95f);
     }
     
 
@@ -51,4 +54,13 @@ public class AmmoCan : MonoBehaviour
             Destroy(instanceMaterial);
         }
     }
+
+  public void setAmmoLastWave()
+	{
+    ammoAtLastWave = currentAmmoCount;
+	}
+  public void setAmmoToLastWave()
+	{
+    currentAmmoCount = ammoAtLastWave;
+	}
 }

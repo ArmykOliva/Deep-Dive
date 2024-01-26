@@ -87,6 +87,7 @@ public class Submarine : MonoBehaviour
 	public void PlayerDied()
 	{
 		if (dead) return;
+		onDeath?.Invoke();
 		dead = true;
 		audioSource.Play();
 		waveSpawner.RestartWave();
@@ -94,6 +95,14 @@ public class Submarine : MonoBehaviour
 		foreach (var crack in cracks)
 		{
 			crack.gameObject.SetActive(false);
+		}
+
+		AmmoCan[] ammoCans = FindObjectsOfType<AmmoCan>();
+
+		// Iterate through each AmmoCan instance and call SetAmmoBack
+		foreach (AmmoCan ammoCan in ammoCans)
+		{
+			ammoCan.setAmmoToLastWave();
 		}
 
 		StartCoroutine(FadeToBlack());
