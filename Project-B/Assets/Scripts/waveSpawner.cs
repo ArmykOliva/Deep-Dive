@@ -32,7 +32,7 @@ public class waveSpawner : MonoBehaviour
 	public UnityEvent onWaveStart;
 	public UnityEvent onWaveStop;
 
-	private int currentWaveIndex = 0;
+	public int currentWaveIndex = 0;
 	private float waveTimer;
 	private List<GameObject> activeEnemies = new List<GameObject>();
 	private bool waitingForNextWave = false;

@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e4328f498a922458cc24b9e28f275c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 15
+  hp: 50
   damage: 10
   flashMaterial: {fileID: 2100000, guid: 7dcd9dcdfabe5194aa68a3150294f629, type: 2}
   damageTexture: {fileID: 0}

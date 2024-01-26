@@ -15,6 +15,7 @@ public class Submarine : MonoBehaviour
 	public Animator panelAnimator;
 	public waveSpawner waveSpawner;
 	public List<CrackFix> cracks;
+	public GameObject shield;
 
 	[Header("death ui")]
 	public Image blackScreen;
@@ -44,6 +45,8 @@ public class Submarine : MonoBehaviour
 
 	public void TakeDamage(int damage)
 	{
+		if (shield.activeSelf) return;
+
 		hp -= damage;
 		lightAnimator.SetTrigger("Fade");
 		panelAnimator.SetTrigger("Fade");

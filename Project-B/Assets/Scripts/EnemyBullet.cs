@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class EnemyBullet : MonoBehaviour, IDamageable
 {
   public float speed = 5f;
+	public int hp = 2;
   public int damage = 1;
   public float maxDistance = 100f;
   public bool active = false;
@@ -87,17 +88,32 @@ public class EnemyBullet : MonoBehaviour, IDamageable
 				{
 					OnHitSubmarine?.Invoke();
 					submarine.TakeDamage(damage);
-				}
 
-				// Bullet hits something, so disable its MeshRenderer and stop it from moving
-				if (bulletMeshRenderer != null)
+					// Bullet hits something, so disable its MeshRenderer and stop it from moving
+					if (bulletMeshRenderer != null)
+					{
+						bulletMeshRenderer.enabled = false;
+					}
+					hasHit = true; // Stop the bullet from moving
+
+					// Start the coroutine to destroy the bullet after 1 second
+					StartCoroutine(DestroyAfterDelay());
+				}
+				else
 				{
-					bulletMeshRenderer.enabled = false;
-				}
-				hasHit = true; // Stop the bullet from moving
+					if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
+					{
+						// Bullet hits something, so disable its MeshRenderer and stop it from moving
+						if (bulletMeshRenderer != null)
+						{
+							bulletMeshRenderer.enabled = false;
+						}
+						hasHit = true; // Stop the bullet from moving
 
-				// Start the coroutine to destroy the bullet after 1 second
-				StartCoroutine(DestroyAfterDelay());
+						// Start the coroutine to destroy the bullet after 1 second
+						StartCoroutine(DestroyAfterDelay());
+					}
+				}
 			}
 		}
   }
@@ -114,7 +130,8 @@ public class EnemyBullet : MonoBehaviour, IDamageable
 	{
     if (active)
     {
-			Destroy(gameObject);
+			hp--;
+			if (hp < 0) Destroy(gameObject);
 		} 
 	}
 }

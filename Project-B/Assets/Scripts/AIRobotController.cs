@@ -19,7 +19,12 @@ public class AIRobotController : MonoBehaviour
 	public float movementSpeed = 2f;
 	public Material lightMaterial;
 	public float idleMovementFrequency = 2f;
+
+	public float maxPlayerDistance = 10f;
+	public float minPlayerDistance = 5f;
+
 	private float lastMoveTime;
+	private Rigidbody rb;
 
 	private Color originalEmissionColor;
 	private float intensity;
@@ -34,6 +39,7 @@ public class AIRobotController : MonoBehaviour
 
 	void Start()
 	{
+		rb = GetComponent<Rigidbody>();
 		foreach (var namedClip in namedVoiceLines)
 		{
 			voiceLineDict[namedClip.name] = namedClip;
@@ -45,8 +51,21 @@ public class AIRobotController : MonoBehaviour
 		audioSampleData = new float[sampleDataLength];
 	}
 
-	void Update()
+	private void FixedUpdate()
 	{
+		// Check the distance to the player
+		float distanceToPlayer = Vector3.Distance(playerTransform.position, rb.position);
+
+		// Decide the state based on the player distance
+		if (distanceToPlayer > maxPlayerDistance)
+		{
+			currentState = State.GotoPlayer;
+		}
+		else if (distanceToPlayer < minPlayerDistance)
+		{
+			currentState = State.WatchPlayer;
+		}
+
 		switch (currentState)
 		{
 			case State.WatchPlayer:
@@ -60,6 +79,10 @@ public class AIRobotController : MonoBehaviour
 				IdleMovement();
 				break;
 		}
+	}
+
+	void Update()
+	{
 
 		AudioSource audioSource = GetComponent<AudioSource>();
 		if (audioSource.isPlaying)
@@ -91,15 +114,22 @@ public class AIRobotController : MonoBehaviour
 	void LookAtPlayer()
 	{
 		if (playerTransform == null) return;
+
 		Vector3 direction = (playerTransform.position - transform.position).normalized;
 		Quaternion lookRotation = Quaternion.LookRotation(direction);
-		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+		Quaternion slerpedRotation = Quaternion.Slerp(rb.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+
+		rb.MoveRotation(slerpedRotation); // Use Rigidbody's MoveRotation for rotation
 	}
 
 	void MoveToPlayer()
 	{
-		LookAtPlayer();
-		transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, movementSpeed * Time.deltaTime);
+		if (playerTransform == null) return;
+
+		LookAtPlayer(); // Orient the object towards the player
+
+		Vector3 movementDirection = (playerTransform.position - transform.position).normalized;
+		rb.MovePosition(rb.position + movementDirection * movementSpeed * Time.deltaTime); // Use Rigidbody's MovePosition for movement
 	}
 
 	void IdleMovement()

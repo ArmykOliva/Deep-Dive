@@ -993,7 +993,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 5
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -5057,7 +5057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  damage: 1
+  damage: 2
   maxDistance: 500
   OnHitWall:
     m_PersistentCalls:
