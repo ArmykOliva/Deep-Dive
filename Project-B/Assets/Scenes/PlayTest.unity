@@ -15258,7 +15258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb80257b7b3cc784fa8fed671020b633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWaveIndex: 16
+  currentWaveIndex: 39
   waves:
   - enemies: []
     nextWaveSeconds: 10
@@ -16853,7 +16853,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 15
+    nextWaveSeconds: 30
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16861,6 +16861,26 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: AIRobotController, Assembly-CSharp
           m_MethodName: PlayVoiceLine
           m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: //GO INTO CORE SCRIPT
+            m_BoolArgument: 0
+          m_CallState: 2
+    onThisWaveStop:
+      m_PersistentCalls:
+        m_Calls: []
+  - enemies: []
+    nextWaveSeconds: 1
+    onThisWaveStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1665130273}
+          m_TargetAssemblyTypeName: FlipToCore, Assembly-CSharp
+          m_MethodName: FlipCore
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
