@@ -5122,15 +5122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemies:
-    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
-        type: 3}
-      spawnTime: 1
-      spawned: 0
-    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
-        type: 3}
-      spawnTime: 3
-      spawned: 0
+  - enemies: []
     nextWaveSeconds: 10
     onThisWaveStart:
       m_PersistentCalls:

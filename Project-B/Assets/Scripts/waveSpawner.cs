@@ -54,7 +54,7 @@ public class waveSpawner : MonoBehaviour
 		Debug.Log("wave " +  waveIndex);
 		waveTimer = 0;
 		waitingForNextWave = false;
-		// Initialize things specific to the wave
+		// Initialize things specific to the wave 
 		onWaveStart?.Invoke();
 		waves[waveIndex].onThisWaveStart?.Invoke();
 
