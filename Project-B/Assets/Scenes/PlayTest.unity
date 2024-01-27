@@ -15258,6 +15258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb80257b7b3cc784fa8fed671020b633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWaveIndex: 16
   waves:
   - enemies: []
     nextWaveSeconds: 10
@@ -15452,7 +15453,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 1
+    nextWaveSeconds: 8
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15472,7 +15473,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 3
+    nextWaveSeconds: 9
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15512,7 +15513,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 1
+    nextWaveSeconds: 10
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15584,7 +15585,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - enemies: []
-    nextWaveSeconds: 1
+    nextWaveSeconds: 10
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15680,7 +15681,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - enemies: []
-    nextWaveSeconds: 1
+    nextWaveSeconds: 15
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15700,7 +15701,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 1
+    nextWaveSeconds: 11
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16148,7 +16149,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 5
+    nextWaveSeconds: 10
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16166,6 +16167,11 @@ MonoBehaviour:
           m_CallState: 2
     onThisWaveStop:
       m_PersistentCalls:
+        m_Calls: []
+  - enemies: []
+    nextWaveSeconds: 12
+    onThisWaveStart:
+      m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 315281600}
           m_TargetAssemblyTypeName: AIRobotController, Assembly-CSharp
@@ -16179,6 +16185,9 @@ MonoBehaviour:
             m_StringArgument: heello_sarah
             m_BoolArgument: 0
           m_CallState: 2
+    onThisWaveStop:
+      m_PersistentCalls:
+        m_Calls: []
   - enemies:
     - enemyPrefab: {fileID: 5412444818254830520, guid: 639a8b2cdd9b7ce40a8b97c10d4df92e,
         type: 3}
@@ -16704,7 +16713,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - enemies: []
-    nextWaveSeconds: 1
+    nextWaveSeconds: 15
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16744,7 +16753,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 1
+    nextWaveSeconds: 20
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16764,7 +16773,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 30
+    nextWaveSeconds: 35
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16844,7 +16853,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 1
+    nextWaveSeconds: 15
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16940,7 +16949,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  currentWaveIndex: 2
 --- !u!4 &903139893
 Transform:
   m_ObjectHideFlags: 0
@@ -30502,6 +30510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb80257b7b3cc784fa8fed671020b633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWaveIndex: 10
   waves:
   - enemies: []
     nextWaveSeconds: 10
@@ -31108,7 +31117,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  currentWaveIndex: 10
 --- !u!4 &2042737150
 Transform:
   m_ObjectHideFlags: 0

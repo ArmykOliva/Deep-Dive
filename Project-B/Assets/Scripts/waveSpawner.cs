@@ -24,6 +24,7 @@ public class EnemySpawnInfo
 
 public class waveSpawner : MonoBehaviour
 {
+	public int currentWaveIndex = 0;
 	public List<EnemyWave> waves;
 	public EnemyBorder spawnBorder;
 	public EnemyBorder enemyBorder; // the border where the enemy will be moving most of the time
@@ -32,7 +33,6 @@ public class waveSpawner : MonoBehaviour
 	public UnityEvent onWaveStart;
 	public UnityEvent onWaveStop;
 
-	public int currentWaveIndex = 0;
 	private float waveTimer;
 	private List<GameObject> activeEnemies = new List<GameObject>();
 	private bool waitingForNextWave = false;
