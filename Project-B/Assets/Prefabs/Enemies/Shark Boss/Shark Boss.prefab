@@ -140,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8730730256208921335}
   - component: {fileID: 5570094768716506470}
+  - component: {fileID: 2841516962536187953}
   m_Layer: 0
   m_Name: Shark Boss
   m_TagString: Untagged
@@ -186,6 +187,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2841516962536187953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367872681824367426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68352e0b8a2a4da42ac89536921e33e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &632705383534914181
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +418,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071065, y: -0, z: -0, w: 0.7071071}
   m_LocalPosition: {x: 0.00000047684, y: -0.078, z: -0.041}
-  m_LocalScale: {x: 0.08853173, y: 0.045406, z: 0.045406}
+  m_LocalScale: {x: 0.031916574, y: 0.045406, z: 0.045406}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8730730256208921335}

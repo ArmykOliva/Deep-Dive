@@ -6,7 +6,7 @@ using static TreeEditor.TreeEditorHelper;
 public class RockOre : MonoBehaviour
 {
 	public GameObject orePrefab;
-	public int numberOfOres = 10;
+	public int numberOfOres = 10; //was 10
 	public float spreadForce = 5f;
 
 	public void SpawnOres()

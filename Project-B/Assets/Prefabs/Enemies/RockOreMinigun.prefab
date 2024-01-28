@@ -110,6 +110,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8130180905803196050, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -139,5 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orePrefab: {fileID: 451297105128788742, guid: 067ec529ea8cfe84ba377e75d64a626f,
     type: 3}
-  numberOfOres: 10
+  numberOfOres: 1
   spreadForce: 2
