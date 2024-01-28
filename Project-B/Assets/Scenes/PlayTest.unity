@@ -26183,6 +26183,11 @@ PrefabInstance:
       propertyPath: OnChargeLasergun.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4449862163220856550, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ef01b6c3b7d0b9408a0134a284aefd7, type: 2}
     - target: {fileID: 4597704326456897522, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: m_IsActive
@@ -26428,6 +26433,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.088
       objectReference: {fileID: 0}
+    - target: {fileID: 8661506803917326751, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ef01b6c3b7d0b9408a0134a284aefd7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 369254950864349633, guid: 0f313eea19f9a08439101e0469d49f9a, type: 3}
