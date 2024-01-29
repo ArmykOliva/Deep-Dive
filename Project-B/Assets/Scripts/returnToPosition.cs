@@ -30,6 +30,7 @@ public class returnBack : MonoBehaviour
 
   void Update()
   {
+
     // Check distance from the original position
     if (Vector3.Distance(transform.position, initialPosition) > distanceToUngrab)
     {
