@@ -139,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 367872681824367426, guid: df7630b3edfd6be468dd315041fb7c4f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8680627673657368633, guid: df7630b3edfd6be468dd315041fb7c4f,
         type: 3}
@@ -486,8 +486,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0130932, y: -0.95948803, z: -0.039287634, w: -0.27868947}
-  m_LocalPosition: {x: -12.509134, y: 4.562213, z: -5.042305}
+  m_LocalRotation: {x: -0.005226649, y: 0.9868242, z: 0.033186026, w: 0.15826996}
+  m_LocalPosition: {x: -11.141605, y: 4.6762185, z: 45.688984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -526,7 +526,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 4af602f532cd0704ab088e41242f090c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 2d61b4a7be1c47944931b489837542ea, type: 2}
 --- !u!4 &1160234427
 Transform:
   m_ObjectHideFlags: 0
@@ -550,6 +550,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1623511431715450896, guid: 49d94e36bccec334bb893240645b1038,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 0.47058824
+      objectReference: {fileID: 0}
     - target: {fileID: 5818501208293313466, guid: 49d94e36bccec334bb893240645b1038,
         type: 3}
       propertyPath: m_Name
@@ -604,6 +609,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729115807710640955, guid: 49d94e36bccec334bb893240645b1038,
+        type: 3}
+      propertyPath: ClampVelocityModule.dampen
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729115807710640955, guid: 49d94e36bccec334bb893240645b1038,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.44313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729115807710640955, guid: 49d94e36bccec334bb893240645b1038,
+        type: 3}
+      propertyPath: ClampVelocityModule.magnitude.scalar
+      value: 2.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
