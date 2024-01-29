@@ -18,7 +18,10 @@ public class EndingManager : MonoBehaviour
 
     public GameObject fakeAI;
 
+  public shark shark;
+
     public Transform Core;
+  public AudioSource music;
 
     [SerializeField] private float speed;
 
@@ -31,7 +34,9 @@ public class EndingManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        Debug.Log("Ending Time!!!");
+    
+
+				Debug.Log("Ending Time!!!");
     }
 
     private void Start()
@@ -46,15 +51,22 @@ public class EndingManager : MonoBehaviour
         if (timer > endBeginSeconds && !playing)
         {
             timer = 0;
-            voicelines.PlayVoiceLine("nice working with u");
+			music.Stop();
+			voicelines.PlayVoiceLine("nice working with u");
             playing = true;
-
+            
         }
 
         if (!AI.GetComponent<AudioSource>().isPlaying && playing)
         {
             AI.SetActive(false);
-            StartCoroutine(ending());
+      shark.stopShootingFunction();
+			foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+			{
+				GameObject.Destroy(enemy);
+			}
+			
+			StartCoroutine(ending());
         }
     }
 

@@ -28,6 +28,7 @@ public class shark : EnemyBase
 
     private Quaternion targetRotation;
     private Vector3 currentVelocity;
+  private bool stopShooting = false;
 
     private void Start()
     {
@@ -70,7 +71,7 @@ public class shark : EnemyBase
         if (timer >= attackTimeInterval)
         {
             timer = 0;
-            StartCoroutine(spawnRockets());
+            if (!stopShooting) StartCoroutine(spawnRockets());
             GetComponent<Animator>().SetTrigger("OpenMouth");
         }
     }
@@ -96,6 +97,11 @@ public class shark : EnemyBase
             yield return new WaitForSeconds(1f);
         }
     }
+
+  public void stopShootingFunction()
+  {
+    stopShooting = true;
+  }
 
 
     private void goToNext()
