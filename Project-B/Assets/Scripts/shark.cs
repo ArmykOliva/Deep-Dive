@@ -12,7 +12,7 @@ public class shark : EnemyBase
     public float coreRadius = 50f; // The radius within which the shark starts avoiding the core.
     public float swimSpeed = 5f; // The swimming speed of the shark.
     public float turnSpeed = 1f; // How quickly the shark can turn.
-  public float rocketNumber = 3;
+    public float rocketNumber = 3;
 
     public GameObject rocket;
     public Transform spawnPoint;
@@ -26,79 +26,77 @@ public class shark : EnemyBase
     private float timer = 0;
     public float attackTimeInterval = 10f;
 
-	private Quaternion targetRotation;
-	private Vector3 currentVelocity;
+    private Quaternion targetRotation;
+    private Vector3 currentVelocity;
 
-	private void Start()
+    private void Start()
     {
-        if(destinationPoints.Count > 0)
+        if (destinationPoints.Count > 0)
         {
             target = destinationPoints[currentIndex];
         }
     }
 
-	private void Update()
-	{
-		timer += Time.deltaTime;
+    private void Update()
+    {
+        timer += Time.deltaTime;
 
-		if (target != null)
-		{
-			// Determine the direction to the target
-			Vector3 targetDirection = (target.position - transform.position).normalized;
+        if (target != null)
+        {
+            // Determine the direction to the target
+            Vector3 targetDirection = (target.position - transform.position).normalized;
 
-			// Only continue if the target is not too close
-			if (targetDirection != Vector3.zero)
-			{
-				// Determine the target rotation towards the target direction
-				targetRotation = Quaternion.LookRotation(targetDirection);
+            // Only continue if the target is not too close
+            if (targetDirection != Vector3.zero)
+            {
+                // Determine the target rotation towards the target direction
+                targetRotation = Quaternion.LookRotation(targetDirection);
 
-				// Slerp the rotation towards the target rotation
-				transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-			}
+                // Slerp the rotation towards the target rotation
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+            }
 
-			// Move the enemy forward in the direction it's facing
-			transform.position += transform.forward * swimSpeed * Time.deltaTime;
+            // Move the enemy forward in the direction it's facing
+            transform.position += transform.forward * swimSpeed * Time.deltaTime;
 
-			// Check if it's time to move to the next target point
-			if (Vector3.Distance(transform.position, target.position) < 10f)
-			{
-				goToNext();
-			}
-		}
+            // Check if it's time to move to the next target point
+            if (Vector3.Distance(transform.position, target.position) < 10f)
+            {
+                goToNext();
+            }
+        }
 
-		// Spawn Rockets
-		if (timer >= attackTimeInterval)
-		{
-			timer = 0;
-			StartCoroutine(spawnRockets());
-			GetComponent<Animator>().SetTrigger("OpenMouth");
-		}
-
-	}
+        // Spawn Rockets
+        if (timer >= attackTimeInterval)
+        {
+            timer = 0;
+            StartCoroutine(spawnRockets());
+            GetComponent<Animator>().SetTrigger("OpenMouth");
+        }
+    }
 
     IEnumerator spawnRockets()
     {
-		for (int i = 0; i < rocketNumber; i++)
-		{
-			GameObject rocket = Instantiate(this.rocket, spawnPoint.position, transform.rotation); // Use the shark's current rotation
-			SharkRocket sharkRocketComponent = rocket.GetComponent<SharkRocket>();
+        for (int i = 0; i < rocketNumber; i++)
+        {
+            GameObject rocket =
+                Instantiate(this.rocket, spawnPoint.position, transform.rotation); // Use the shark's current rotation
+            SharkRocket sharkRocketComponent = rocket.GetComponent<SharkRocket>();
 
-			if (sharkRocketComponent != null)
-			{
-				sharkRocketComponent.core = this.core;
-				sharkRocketComponent.target = this.rocketTarget;
+            if (sharkRocketComponent != null)
+            {
+                sharkRocketComponent.core = this.core;
+                sharkRocketComponent.target = this.rocketTarget;
+            }
+            else
+            {
+                Debug.LogError("SharkRocket component not found on the instantiated rocket object.");
+            }
 
-			}
-			else
-			{
-				Debug.LogError("SharkRocket component not found on the instantiated rocket object.");
-			}
+            yield return new WaitForSeconds(1f);
+        }
+    }
 
-			yield return new WaitForSeconds(1f);
-		}
-	}
-    
-   
 
     private void goToNext()
     {
