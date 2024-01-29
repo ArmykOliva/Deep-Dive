@@ -10030,7 +10030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e1aad1b0c694aa4abce3cbec0c3fbc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
+  hp: 5
   damage: 20
   OnHitSubmarine:
     m_PersistentCalls:
@@ -10062,7 +10062,7 @@ MonoBehaviour:
   bulletMeshRenderer: {fileID: 2185292166062211426}
   target: {fileID: 0}
   core: {fileID: 0}
-  coreRadius: 50
+  coreRadius: 80
   swimSpeed: 15
   turnSpeed: 10
 --- !u!65 &135805098789557487
