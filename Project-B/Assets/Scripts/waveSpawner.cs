@@ -124,6 +124,15 @@ public class waveSpawner : MonoBehaviour
 
 	public void RestartWave()
 	{
+		if (currentWaveIndex >= waves.Count)
+		{
+			GameObject[] enemiess = GameObject.FindGameObjectsWithTag("Enemy");
+			foreach (GameObject enemy in enemiess)
+			{
+				GameObject.Destroy(enemy);
+			}
+			return;
+		}
 		// Destroy all active enemies
 		foreach (var enemy in activeEnemies)
 		{

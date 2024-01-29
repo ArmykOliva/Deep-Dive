@@ -20,10 +20,20 @@ public class SharkRocket : MonoBehaviour, IDamageable
   public float turnSpeed = 1f; // How quickly the shark can turn.
   private Vector3 currentVelocity;
 
+	private int state = 0;
+
 	private void Start()
 	{
-		
+		StartCoroutine(BeginMovingForward());
 	}
+
+	private IEnumerator BeginMovingForward()
+	{
+		state = 0;
+		yield return new WaitForSeconds(0.5f);
+		state = 1;
+	}
+
 
 	private void Update()
 	{
@@ -35,38 +45,45 @@ public class SharkRocket : MonoBehaviour, IDamageable
 			}
 			return;
 		}
-		Vector3 toTarget = (target.position - transform.position).normalized;
-		Vector3 toCore = (core.position - transform.position).normalized;
-		Vector3 toCoreFromTarget = (core.position - target.position).normalized;
 
-		// Calculate the normal of the plane defined by the shark, the core, and the target
-		Vector3 planeNormal = Vector3.Cross(toCore, toCoreFromTarget).normalized;
-
-		// Determine whether the target is to the left or right side of the shark
-		float directionSign = Mathf.Sign(Vector3.Dot(planeNormal, Vector3.Cross(toCore, toTarget)));
-
-		// Calculate the direction to avoid the core
-		Vector3 coreAvoidanceDirection = Vector3.Cross(planeNormal, toCore).normalized * directionSign;
-
-		// Check if we need to avoid the core
-		float distanceToCore = Vector3.Distance(transform.position, core.position);
-		if (distanceToCore < coreRadius)
+        if (state == 0)
+        {
+			transform.position += transform.forward * swimSpeed*2f * Time.deltaTime;
+		} else
 		{
-			float proximity = (coreRadius - distanceToCore) / coreRadius;
-			toTarget = Vector3.Lerp(toTarget, coreAvoidanceDirection, proximity).normalized;
-		}
+			Vector3 toTarget = (target.position - transform.position).normalized;
+			Vector3 toCore = (core.position - transform.position).normalized;
+			Vector3 toCoreFromTarget = (core.position - target.position).normalized;
 
-		// Calculate smoothed velocity
-		currentVelocity = Vector3.Lerp(currentVelocity, toTarget * swimSpeed, turnSpeed * Time.deltaTime);
+			// Calculate the normal of the plane defined by the shark, the core, and the target
+			Vector3 planeNormal = Vector3.Cross(toCore, toCoreFromTarget).normalized;
 
-		// Move the shark forward along the calculated velocity
-		transform.position += currentVelocity * Time.deltaTime;
+			// Determine whether the target is to the left or right side of the shark
+			float directionSign = Mathf.Sign(Vector3.Dot(planeNormal, Vector3.Cross(toCore, toTarget)));
 
-		// Rotate the shark to face the current velocity
-		if (currentVelocity != Vector3.zero)
-		{
-			Quaternion targetRotation = Quaternion.LookRotation(currentVelocity);
-			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+			// Calculate the direction to avoid the core
+			Vector3 coreAvoidanceDirection = Vector3.Cross(planeNormal, toCore).normalized * directionSign;
+
+			// Check if we need to avoid the core
+			float distanceToCore = Vector3.Distance(transform.position, core.position);
+			if (distanceToCore < coreRadius)
+			{
+				float proximity = (coreRadius - distanceToCore) / coreRadius;
+				toTarget = Vector3.Lerp(toTarget, coreAvoidanceDirection, proximity).normalized;
+			}
+
+			// Calculate smoothed velocity
+			currentVelocity = Vector3.Lerp(currentVelocity, toTarget * swimSpeed, turnSpeed * Time.deltaTime);
+
+			// Move the shark forward along the calculated velocity
+			transform.position += currentVelocity * Time.deltaTime;
+
+			// Rotate the shark to face the current velocity
+			if (currentVelocity != Vector3.zero)
+			{
+				Quaternion targetRotation = Quaternion.LookRotation(currentVelocity);
+				transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+			}
 		}
 	}
 
