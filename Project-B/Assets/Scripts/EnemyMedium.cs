@@ -40,8 +40,11 @@ public class EnemyMedium : EnemyBase
 	{
 		if (dead)
 		{
-			Debug.Log(currentBeak);
-			if (currentBeak != null) Destroy(currentBeak);
+			EnemyBullet bullet = GetComponentInChildren<EnemyBullet>();
+			if (bullet != null)
+			{
+				Destroy(bullet.gameObject);
+			}
 			return;
 		}
 		switch 	(currentState)
