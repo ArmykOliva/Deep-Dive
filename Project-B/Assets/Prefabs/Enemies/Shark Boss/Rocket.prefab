@@ -9899,7 +9899,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 866046be4617edf429460752325de8b5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.41
+      value: 23.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 866046be4617edf429460752325de8b5,
         type: 3}
@@ -9909,7 +9909,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 866046be4617edf429460752325de8b5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 92.2
+      value: 124.51
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 866046be4617edf429460752325de8b5,
         type: 3}
@@ -10062,7 +10062,7 @@ MonoBehaviour:
   bulletMeshRenderer: {fileID: 2185292166062211426}
   target: {fileID: 0}
   core: {fileID: 0}
-  coreRadius: 90
+  coreRadius: 50
   swimSpeed: 15
   turnSpeed: 10
 --- !u!65 &135805098789557487
