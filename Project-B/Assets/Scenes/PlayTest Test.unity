@@ -7724,7 +7724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &422878942
 Transform:
   m_ObjectHideFlags: 0
@@ -15594,7 +15594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb80257b7b3cc784fa8fed671020b633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWaveIndex: 35
+  currentWaveIndex: 34
   waves:
   - enemies: []
     nextWaveSeconds: 10
@@ -17661,7 +17661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &984598837
 Transform:
   m_ObjectHideFlags: 0
@@ -27658,7 +27658,7 @@ PrefabInstance:
     - target: {fileID: 367872681824367426, guid: df7630b3edfd6be468dd315041fb7c4f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8730730256208921335, guid: df7630b3edfd6be468dd315041fb7c4f,
         type: 3}
