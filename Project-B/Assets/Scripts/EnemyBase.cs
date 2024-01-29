@@ -85,9 +85,13 @@ public abstract class EnemyBase : MonoBehaviour, IDamageable
     OnDie?.Invoke();
     dead = true;
     rend.enabled = false;
-    GetComponent<Collider>().enabled = false;
-    // Start the coroutine to delay destruction
-    StartCoroutine(DelayedDestruction());
+    if (GetComponent<Collider>() != null) GetComponent<Collider>().enabled = false;
+		foreach (var collider in GetComponentsInChildren<Collider>())
+		{
+			collider.enabled = false;
+		}
+		// Start the coroutine to delay destruction
+		StartCoroutine(DelayedDestruction());
   }
 
   private IEnumerator DelayedDestruction()

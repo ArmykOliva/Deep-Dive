@@ -5054,8 +5054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef829c68ab75b540abb1fe5c97f9fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  damage: 3
+  speed: 60
+  damage: 4
   maxDistance: 500
   OnHitWall:
     m_PersistentCalls:
@@ -5084,7 +5084,6 @@ MonoBehaviour:
           m_StringArgument: HitWall
           m_BoolArgument: 0
         m_CallState: 2
-  bulletMeshRenderer: {fileID: 2396834557652636476}
 --- !u!54 &3528684463871670558
 Rigidbody:
   m_ObjectHideFlags: 0

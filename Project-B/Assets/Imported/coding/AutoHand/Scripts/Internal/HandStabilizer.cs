@@ -12,7 +12,9 @@ namespace Autohand{
         public HandBase hand = null;
 
         void Start(){
-            if (!GetComponent<Camera>().enabled || hand == null)
+			OVRManager.instance.useOcclusionMesh = false;
+
+			if (!GetComponent<Camera>().enabled || hand == null)
                 enabled = false;
         }
 

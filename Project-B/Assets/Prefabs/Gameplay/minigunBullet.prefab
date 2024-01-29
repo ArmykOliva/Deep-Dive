@@ -5057,7 +5057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef829c68ab75b540abb1fe5c97f9fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 60
   damage: 2
   maxDistance: 500
   OnHitWall:

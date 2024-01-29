@@ -28,7 +28,7 @@ TagManager:
   - PlayerCollidableOnly
   - Bullet
   - EnemyCollidableOnly
-  - 
+  - VisibleToSecondaryCameras
   - 
   - 
   - 
