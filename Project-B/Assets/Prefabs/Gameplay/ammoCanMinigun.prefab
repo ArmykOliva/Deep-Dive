@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoType: 0
-  ammoCount: 1000
+  ammoCount: 700
   currentAmmoCount: 0
 --- !u!114 &8845084229122042307
 MonoBehaviour:

@@ -212,94 +212,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1903c4fbce55f0745b2b830b12693fc0, type: 3}
---- !u!1001 &13606654
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 596588796230235342, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: core
-      value: 
-      objectReference: {fileID: 422878942}
-    - target: {fileID: 596588796230235342, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1283429527}
-    - target: {fileID: 596588796230235342, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: coreRadius
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5818501208293313466, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_Name
-      value: Rocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 5818501208293313466, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 23.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 124.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626106399718985984, guid: 49d94e36bccec334bb893240645b1038,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 49d94e36bccec334bb893240645b1038, type: 3}
 --- !u!1 &44961270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2975536283509165196, guid: 0f313eea19f9a08439101e0469d49f9a,
@@ -6406,6 +6318,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 26.76, y: 1, z: 0.056199025}
   m_Center: {x: -6.2868986, y: 0, z: 0.65}
+--- !u!1 &227647567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3721388995888569271, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &227647576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9047068870190816707, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227647567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822bc9090447b9c40833509c4a32e597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &227647577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227647567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ddecfd57951984cb3fe8b722d3f68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnGrabPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227647576}
+        m_TargetAssemblyTypeName: Autohand.Grabbable, Assembly-CSharp
+        m_MethodName: ForceHandsRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &234255371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15583,7 +15540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb80257b7b3cc784fa8fed671020b633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWaveIndex: 0
+  currentWaveIndex: 12
   waves:
   - enemies: []
     nextWaveSeconds: 10
@@ -15646,6 +15603,26 @@ MonoBehaviour:
         type: 3}
       spawnTime: 9
       spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 11
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 10
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 11
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 13
+      spawned: 0
     nextWaveSeconds: 5
     onThisWaveStart:
       m_PersistentCalls:
@@ -15692,13 +15669,29 @@ MonoBehaviour:
       spawned: 0
     - enemyPrefab: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
         type: 3}
-      spawnTime: 8
+      spawnTime: 13
       spawned: 0
     - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
-      spawnTime: 8
+      spawnTime: 14
       spawned: 0
-    nextWaveSeconds: 1
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 14
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 16
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 17
+      spawned: 0
+    nextWaveSeconds: 2
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15718,7 +15711,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 15
+    nextWaveSeconds: 80
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15737,9 +15730,72 @@ MonoBehaviour:
     onThisWaveStop:
       m_PersistentCalls:
         m_Calls: []
-  - enemies: []
+  - enemies:
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 0
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 8
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 10
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 11
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
     nextWaveSeconds: 4
     onThisWaveStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onThisWaveStop:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 315281600}
@@ -15754,11 +15810,8 @@ MonoBehaviour:
             m_StringArgument: Lot_of_Water
             m_BoolArgument: 0
           m_CallState: 2
-    onThisWaveStop:
-      m_PersistentCalls:
-        m_Calls: []
   - enemies: []
-    nextWaveSeconds: 60
+    nextWaveSeconds: 90
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15772,66 +15825,6 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: Flex_Tape
-            m_BoolArgument: 0
-          m_CallState: 2
-    onThisWaveStop:
-      m_PersistentCalls:
-        m_Calls: []
-  - enemies: []
-    nextWaveSeconds: 8
-    onThisWaveStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 315281600}
-          m_TargetAssemblyTypeName: AIRobotController, Assembly-CSharp
-          m_MethodName: PlayVoiceLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Use_that_in_emergencies
-            m_BoolArgument: 0
-          m_CallState: 2
-    onThisWaveStop:
-      m_PersistentCalls:
-        m_Calls: []
-  - enemies: []
-    nextWaveSeconds: 9
-    onThisWaveStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1665130276}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    onThisWaveStop:
-      m_PersistentCalls:
-        m_Calls: []
-  - enemies: []
-    nextWaveSeconds: 8
-    onThisWaveStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 315281600}
-          m_TargetAssemblyTypeName: AIRobotController, Assembly-CSharp
-          m_MethodName: PlayVoiceLine
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: what
             m_BoolArgument: 0
           m_CallState: 2
     onThisWaveStop:
@@ -15878,6 +15871,18 @@ MonoBehaviour:
         type: 3}
       spawnTime: 8
       spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
     nextWaveSeconds: 6
     onThisWaveStart:
       m_PersistentCalls:
@@ -15910,7 +15915,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - enemies: []
-    nextWaveSeconds: 10
+    nextWaveSeconds: 8
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15923,14 +15928,14 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Lots_of_Water
+            m_StringArgument: Use_that_in_emergencies
             m_BoolArgument: 0
           m_CallState: 2
     onThisWaveStop:
       m_PersistentCalls:
         m_Calls: []
   - enemies: []
-    nextWaveSeconds: 60
+    nextWaveSeconds: 40
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -15970,11 +15975,71 @@ MonoBehaviour:
         type: 3}
       spawnTime: 15
       spawned: 0
-    - enemyPrefab: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
-      spawnTime: 20
+      spawnTime: 5
       spawned: 0
-    nextWaveSeconds: 60
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 7
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 11
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 14
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 14
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 14
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 16
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 17
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 14
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 19
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 21
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 21
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 21
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 21
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 21
+      spawned: 0
+    nextWaveSeconds: 5
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16056,11 +16121,11 @@ MonoBehaviour:
       spawned: 0
     - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
-      spawnTime: 12
+      spawnTime: 1
       spawned: 0
     - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
-      spawnTime: 2
+      spawnTime: 8
       spawned: 0
     - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
@@ -16068,7 +16133,7 @@ MonoBehaviour:
       spawned: 0
     - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
-      spawnTime: 4
+      spawnTime: 5
       spawned: 0
     - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
@@ -16076,7 +16141,75 @@ MonoBehaviour:
       spawned: 0
     - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
-      spawnTime: 6
+      spawnTime: 7
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 9
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 10
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 11
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 11
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 12
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 18
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 19
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 20
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 21
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 25
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 25
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 25
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 25
       spawned: 0
     nextWaveSeconds: 6
     onThisWaveStart:
@@ -16154,31 +16287,31 @@ MonoBehaviour:
         type: 3}
       spawnTime: 30
       spawned: 0
-    - enemyPrefab: {fileID: 2601172389062080216, guid: 2aa99c23d852864449ff3eadf148562a,
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
       spawnTime: 35
       spawned: 0
-    - enemyPrefab: {fileID: 5412444818254830520, guid: 639a8b2cdd9b7ce40a8b97c10d4df92e,
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
       spawnTime: 35
       spawned: 0
-    - enemyPrefab: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 40
       spawned: 0
-    - enemyPrefab: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
-      spawnTime: 45
+      spawnTime: 40
       spawned: 0
     - enemyPrefab: {fileID: 5412444818254830520, guid: 639a8b2cdd9b7ce40a8b97c10d4df92e,
         type: 3}
-      spawnTime: 48
+      spawnTime: 15
       spawned: 0
     - enemyPrefab: {fileID: 2601172389062080216, guid: 2aa99c23d852864449ff3eadf148562a,
         type: 3}
-      spawnTime: 51
+      spawnTime: 15
       spawned: 0
-    nextWaveSeconds: 120
+    nextWaveSeconds: 80
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16322,7 +16455,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - enemies: []
-    nextWaveSeconds: 120
+    nextWaveSeconds: 100
     onThisWaveStart:
       m_PersistentCalls:
         m_Calls:
@@ -16482,7 +16615,7 @@ MonoBehaviour:
         type: 3}
       spawnTime: 1
       spawned: 0
-    - enemyPrefab: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 5
       spawned: 0
@@ -16494,33 +16627,53 @@ MonoBehaviour:
         type: 3}
       spawnTime: 10
       spawned: 0
-    - enemyPrefab: {fileID: 5412444818254830520, guid: 639a8b2cdd9b7ce40a8b97c10d4df92e,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 10
       spawned: 0
     - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
+      spawnTime: 10
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 10
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 10
+      spawned: 0
+    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+        type: 3}
+      spawnTime: 12
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 15
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
       spawnTime: 15
       spawned: 0
     - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
-      spawnTime: 15
+      spawnTime: 18
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 19
       spawned: 0
     - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
-      spawnTime: 15
+      spawnTime: 20
       spawned: 0
     - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
-      spawnTime: 25
+      spawnTime: 20
       spawned: 0
     - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
-      spawnTime: 25
-      spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
-        type: 3}
-      spawnTime: 25
+      spawnTime: 20
       spawned: 0
     - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
         type: 3}
@@ -16534,45 +16687,37 @@ MonoBehaviour:
         type: 3}
       spawnTime: 35
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
-      spawnTime: 45
-      spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
-        type: 3}
-      spawnTime: 45
-      spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
-        type: 3}
-      spawnTime: 55
-      spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
-        type: 3}
-      spawnTime: 55
-      spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
-        type: 3}
-      spawnTime: 55
-      spawned: 0
-    - enemyPrefab: {fileID: 5412444818254830520, guid: 639a8b2cdd9b7ce40a8b97c10d4df92e,
-        type: 3}
-      spawnTime: 65
+      spawnTime: 35
       spawned: 0
     - enemyPrefab: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
         type: 3}
-      spawnTime: 65
+      spawnTime: 50
       spawned: 0
     - enemyPrefab: {fileID: 2601172389062080216, guid: 2aa99c23d852864449ff3eadf148562a,
         type: 3}
-      spawnTime: 75
+      spawnTime: 50
       spawned: 0
     - enemyPrefab: {fileID: 2601172389062080216, guid: 2aa99c23d852864449ff3eadf148562a,
         type: 3}
-      spawnTime: 75
+      spawnTime: 51
       spawned: 0
     - enemyPrefab: {fileID: 7961585560451432524, guid: 860939e96fb2df74b970fef69f3fb15d,
         type: 3}
-      spawnTime: 80
+      spawnTime: 52
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 52
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 52
+      spawned: 0
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
+        type: 3}
+      spawnTime: 52
       spawned: 0
     nextWaveSeconds: 28
     onThisWaveStart:
@@ -16605,26 +16750,6 @@ MonoBehaviour:
             m_StringArgument: now_here_we_are
             m_BoolArgument: 0
           m_CallState: 2
-  - enemies: []
-    nextWaveSeconds: 15
-    onThisWaveStart:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1665130276}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Even_As_We_Bail
-            m_BoolArgument: 0
-          m_CallState: 2
-    onThisWaveStop:
-      m_PersistentCalls:
-        m_Calls: []
   - enemies: []
     nextWaveSeconds: 80
     onThisWaveStart:
@@ -16666,7 +16791,7 @@ MonoBehaviour:
         type: 3}
       spawnTime: 11
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 12
       spawned: 0
@@ -16682,7 +16807,7 @@ MonoBehaviour:
         type: 3}
       spawnTime: 20
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 5412444818254830520, guid: 639a8b2cdd9b7ce40a8b97c10d4df92e,
         type: 3}
       spawnTime: 26
       spawned: 0
@@ -16706,7 +16831,7 @@ MonoBehaviour:
         type: 3}
       spawnTime: 32
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 35
       spawned: 0
@@ -16714,7 +16839,7 @@ MonoBehaviour:
         type: 3}
       spawnTime: 37
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 38
       spawned: 0
@@ -16730,7 +16855,7 @@ MonoBehaviour:
         type: 3}
       spawnTime: 48
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 50
       spawned: 0
@@ -16738,11 +16863,11 @@ MonoBehaviour:
         type: 3}
       spawnTime: 55
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 57
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 59
       spawned: 0
@@ -16754,7 +16879,7 @@ MonoBehaviour:
         type: 3}
       spawnTime: 63
       spawned: 0
-    - enemyPrefab: {fileID: 7840224330318950641, guid: 938d85c56da695543b0dd0300cdadc08,
+    - enemyPrefab: {fileID: 6183319602890068073, guid: 1d4ef4cd282fb0446a8a477da1484c26,
         type: 3}
       spawnTime: 64
       spawned: 0
@@ -24192,12 +24317,6 @@ Transform:
   - {fileID: 1472697594}
   m_Father: {fileID: 1400084983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1283429527 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3907841891024185047, guid: 0f313eea19f9a08439101e0469d49f9a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1400084982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1291684335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24612,143 +24731,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2042737150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1340308314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1340308318}
-  - component: {fileID: 1340308317}
-  - component: {fileID: 1340308316}
-  - component: {fileID: 1340308315}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: MinigunAmmo
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1340308315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340308314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: 0
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 3
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 2
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
---- !u!81 &1340308316
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340308314}
-  m_Enabled: 1
---- !u!20 &1340308317
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340308314}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 12
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.01
-  far clip plane: 1000
-  field of view: 100.2439
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 4
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 131071
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1340308318
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340308314}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.294, y: -0.669, z: 0.149}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1342542735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4996593761235138, guid: 683ef653b4b09b94993b7fd393c95978,
@@ -25045,7 +25027,7 @@ PrefabInstance:
     - target: {fileID: 7136694744963442278, guid: dbd626ebc18326040894e6e49499983a,
         type: 3}
       propertyPath: m_Depth
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7136694744963442278, guid: dbd626ebc18326040894e6e49499983a,
         type: 3}
@@ -26197,6 +26179,11 @@ PrefabInstance:
       propertyPath: OnRemove.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3908078985143197134, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4197990486283370439, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -26647,6 +26634,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.088
       objectReference: {fileID: 0}
+    - target: {fileID: 8344754090504678071, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8661506803917326751, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -26733,6 +26725,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1400084989}
+    - targetCorrespondingSourceObject: {fileID: 8527507692180843726, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1859624911}
+    - targetCorrespondingSourceObject: {fileID: 3721388995888569271, guid: 0f313eea19f9a08439101e0469d49f9a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 227647577}
     - targetCorrespondingSourceObject: {fileID: 2249592420227128736, guid: 0f313eea19f9a08439101e0469d49f9a,
         type: 3}
       insertIndex: -1
@@ -30031,6 +30031,51 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 1017981061}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1859624901 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8527507692180843726, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1859624910 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4071088825870461626, guid: 0f313eea19f9a08439101e0469d49f9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1400084982}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859624901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822bc9090447b9c40833509c4a32e597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1859624911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859624901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ddecfd57951984cb3fe8b722d3f68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnGrabPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1859624910}
+        m_TargetAssemblyTypeName: Autohand.Grabbable, Assembly-CSharp
+        m_MethodName: ForceHandsRelease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1873006150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8907650898414820959, guid: 1903c4fbce55f0745b2b830b12693fc0,
@@ -33150,5 +33195,3 @@ SceneRoots:
   - {fileID: 2042737150}
   - {fileID: 175401942}
   - {fileID: 2030659406}
-  - {fileID: 13606654}
-  - {fileID: 1340308318}

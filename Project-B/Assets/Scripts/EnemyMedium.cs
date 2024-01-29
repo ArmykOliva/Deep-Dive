@@ -40,6 +40,7 @@ public class EnemyMedium : EnemyBase
 	{
 		if (dead)
 		{
+			Debug.Log(currentBeak);
 			if (currentBeak != null) Destroy(currentBeak);
 			return;
 		}

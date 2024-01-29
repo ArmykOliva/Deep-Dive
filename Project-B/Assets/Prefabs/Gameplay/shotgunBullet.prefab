@@ -5004,8 +5004,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.3522986
+  m_Center: {x: 0.0025838611, y: 0, z: -0}
 --- !u!1 &6681873948133400755
 GameObject:
   m_ObjectHideFlags: 0
@@ -5055,7 +5055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
-  damage: 4
+  damage: 3
   maxDistance: 500
   OnHitWall:
     m_PersistentCalls:

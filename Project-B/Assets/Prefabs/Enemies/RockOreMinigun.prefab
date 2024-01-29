@@ -144,5 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orePrefab: {fileID: 451297105128788742, guid: 067ec529ea8cfe84ba377e75d64a626f,
     type: 3}
-  numberOfOres: 1
+  numberOfOres: 10
   spreadForce: 2

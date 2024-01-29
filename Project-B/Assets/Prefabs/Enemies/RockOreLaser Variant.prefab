@@ -17,7 +17,7 @@ PrefabInstance:
     - target: {fileID: 1591206469057222299, guid: 860939e96fb2df74b970fef69f3fb15d,
         type: 3}
       propertyPath: numberOfOres
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4496523863971058293, guid: 860939e96fb2df74b970fef69f3fb15d,
         type: 3}
