@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TreeEditor.TreeEditorHelper;
 using static UnityEngine.GraphicsBuffer;
 
 public class Ore : MonoBehaviour

@@ -10,7 +10,6 @@ public class bullet : MonoBehaviour
 	public float maxDistance = 300f;
 
 	public UnityEvent OnHitWall;
-	public MeshRenderer bulletMeshRenderer; // Assign this in the inspector
 
 	private Vector3 startPosition;
 	private bool hasHit = false; // To check if the bullet has hit something
@@ -52,10 +51,7 @@ public class bullet : MonoBehaviour
 			}
 
 			// Bullet hits something, so disable its MeshRenderer and stop it from moving
-			if (bulletMeshRenderer != null)
-			{
-				bulletMeshRenderer.enabled = false;
-			}
+			DisableAllMeshRenderers();
 			hasHit = true; // Stop the bullet from moving
 
 			// Start the coroutine to destroy the bullet after 1 second
@@ -69,5 +65,25 @@ public class bullet : MonoBehaviour
 		yield return new WaitForSeconds(1f);
 		// Then destroy the bullet game object
 		Destroy(gameObject);
+	}
+
+	private void DisableAllMeshRenderers()
+	{
+		// Disable the MeshRenderer of the current GameObject
+		MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+		if (meshRenderer != null)
+		{
+			meshRenderer.enabled = false;
+		}
+
+		// Disable all MeshRenderers in child GameObjects
+		foreach (Transform child in transform)
+		{
+			meshRenderer = child.GetComponent<MeshRenderer>();
+			if (meshRenderer != null)
+			{
+				meshRenderer.enabled = false;
+			}
+		}
 	}
 }

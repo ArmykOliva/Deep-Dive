@@ -64,6 +64,13 @@ public class EnemyBullet : MonoBehaviour, IDamageable
 			{
 				startPosition = transform.position;
 			}
+		} else
+		{
+			// Bullet hits something, so disable its MeshRenderer and stop it from moving
+			if (bulletMeshRenderer != null)
+			{
+				bulletMeshRenderer.enabled = false;
+			}
 		}
 
 		//enable and siable collider
@@ -88,12 +95,6 @@ public class EnemyBullet : MonoBehaviour, IDamageable
 				{
 					OnHitSubmarine?.Invoke();
 					submarine.TakeDamage(damage);
-
-					// Bullet hits something, so disable its MeshRenderer and stop it from moving
-					if (bulletMeshRenderer != null)
-					{
-						bulletMeshRenderer.enabled = false;
-					}
 					hasHit = true; // Stop the bullet from moving
 
 					// Start the coroutine to destroy the bullet after 1 second
@@ -103,11 +104,7 @@ public class EnemyBullet : MonoBehaviour, IDamageable
 				{
 					if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
 					{
-						// Bullet hits something, so disable its MeshRenderer and stop it from moving
-						if (bulletMeshRenderer != null)
-						{
-							bulletMeshRenderer.enabled = false;
-						}
+					
 						hasHit = true; // Stop the bullet from moving
 
 						// Start the coroutine to destroy the bullet after 1 second

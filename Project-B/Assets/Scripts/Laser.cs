@@ -28,7 +28,7 @@ public class Laser : MonoBehaviour
 			if (damageable == null) damageable = hit.collider.GetComponentInParent<IDamageable>();
 			if (damageable != null)
 			{
-				damageable.TakeDamage(Mathf.RoundToInt(damage * strength));
+				damageable.TakeDamage(Mathf.RoundToInt(damage * Mathf.Clamp01(strength+0.2f)));
 			}
 		}
     else

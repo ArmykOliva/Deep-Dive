@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f31aff7311a024f813a5e00614a0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 50
   strength: 1
   maxDistance: 300
   lineRenderer: {fileID: 7415436547395449930}
