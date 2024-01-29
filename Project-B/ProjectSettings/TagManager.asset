@@ -9,6 +9,7 @@ TagManager:
   - ShotgunAmmo
   - MinigunAmmo
   - OreCollect
+  - core
   layers:
   - Default
   - TransparentFX
