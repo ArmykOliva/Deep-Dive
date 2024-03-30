@@ -1,5 +1,5 @@
 # Deep Dive
-Watch trailer (HERE)[https://www.youtube.com/watch?v=AEBbwvIVgL4]
+Watch trailer [HERE](https://www.youtube.com/watch?v=AEBbwvIVgL4)
 
 A game made for TUM Games Engineering.
 
